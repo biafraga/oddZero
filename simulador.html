@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulador - OddZero</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=block" rel="stylesheet">
+  
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/simulador.css">
@@ -36,13 +38,29 @@
   </ul>
 </nav>
 
-<!-- HERO SIMULADOR -->
-<section class="section" style="padding-top: 140px; padding-bottom: 40px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-  <div class="section-label" style="justify-content: center;">// calculando o prejuízo</div>
-  <h1 class="section-h2" style="margin-bottom: 16px; text-align: center;">O JOGO QUE VOCÊ <span class="hl-red">NUNCA GANHA</span></h1>
-  <p class="casos-sub" style="max-width: 800px; margin-top: 0; text-align: center;">
-    Descubra como as apostas afetam seu orçamento ao longo do tempo. Este simulador possui caráter educativo e informativo. Nenhum dado preenchido aqui é armazenado ou compartilhado. Os resultados são estimativas baseadas na matemática real dos algoritmos.
-  </p>
+<!-- ══════════════════════════
+     HERO SIMULADOR COM VÍDEO (AUTOPLAY LOOP)
+══════════════════════════ -->
+<section class="hero-video-section">
+  
+  <!-- O Vídeo Fixo no Fundo -->
+  <div class="video-container">
+    <video id="ficha-video" src="assets/videos/fichas_quebrando.mp4" autoplay loop muted playsinline preload="auto"></video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Texto Principal -->
+  <div class="hero-content">
+    <div class="section-label" style="justify-content: center;">// calculando o prejuízo</div>
+    <h1 class="hero-h1" style="text-align: center; margin-bottom: 16px;">O JOGO QUE VOCÊ <span class="hl-red">NUNCA GANHA</span></h1>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto;">Descubra como as apostas afetam seu orçamento ao longo do tempo. Este simulador possui caráter educativo e informativo. Nenhum dado preenchido aqui é armazenado ou compartilhado.</p>
+  </div>
+</section>
+
+<!-- Título Intermediário antes do Formulário -->
+<section class="section" style="padding-top: 40px; padding-bottom: 40px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <h2 class="section-h2" style="text-align: center; color: var(--lime); font-size: clamp(40px, 6vw, 80px);">A MATEMÁTICA TE QUEBRA</h2>
+    <p style="text-align: center; max-width: 800px;">Role para baixo para descobrir a projeção real da sua perda financeira com base nas probabilidades dos algoritmos.</p>
 </section>
 
 <!-- MAIN SIMULADOR GRID -->
@@ -131,7 +149,7 @@
 
     </div>
 
-    <!-- LADO DIREITO: RESULTADOS -->
+    <!-- RESULTADOS -->
     <div class="sim-result-container">
       <div class="sim-box result-placeholder" id="placeholder-resultado">
         <div class="icon-placeholder">📊</div>
@@ -159,10 +177,9 @@
     <div class="footer-links">
       <h4>Conteúdo</h4>
       <ul>
-        <li><a href="index.html#cards">Área Informativa</a></li>
         <li><a href="bets.html">Sobre as Bets</a></li>
         <li><a href="simulador.html">Simulador</a></li>
-        <li><a href="casos-reais.html">Cases Reais</a></li>
+        <li><a href="casos-reais.html">Casos Reais</a></li>
       </ul>
     </div>
     <div class="footer-links">
@@ -175,7 +192,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>// SENAC RIO · ADS 2026.1 · Extensão: Educação Digital</p>
+    <p>// SENAC RIO · ADS Turma 2024.1 · Projeto 2026 · Extensão: Educação Digital</p>
     <p>Feito com propósito, não com lucro.</p>
   </div>
 </footer>

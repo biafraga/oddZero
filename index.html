@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OddZero</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=block" rel="stylesheet">
+  
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/home.css">
@@ -325,15 +327,15 @@
 <div class="about-section">
   <div class="about-left">
     <h2 class="about-big">
-      ELAS TÊM <span class="hl-lime">NOMES</span><br>
-      DIFERENTES.<br>
-      O <span class="hl-red">TRUQUE</span><br>
-      É O MESMO.
+      A BANCA NÃO<br>
+      JOGA NA <span class="hl-lime">SORTE.</span><br>
+      ELA <span class="hl-red">JOGA</span><br>
+      COM MATEMÁTICA.
     </h2>
     <p class="about-body">
       Tigrinho, Aviator, roletas coloridas. O visual muda para te viciar, mas o código por trás é um clone: o algoritmo nunca joga na sorte. Descubra a verdade sobre como o sistema opera e por que a matemática sempre vai zerar a sua conta.
     </p>
-    <a href="bets.html" class="btn-main">Conhecer a verdade <span class="arr">→</span></a>
+    <a href="simulador.html" class="btn-main">Simular minha perda<span class="arr">→</span></a>
   </div>
   
   <div class="about-right">
@@ -414,56 +416,25 @@
 
 
 <!-- ══════════════════════════
-     FÓRUM
+     CTA CONTE SUA HISTÓRIA (FÓRUM)
 ══════════════════════════ -->
-<section class="section" id="forum" style="border-top: 1px solid #1a1a1a">
-  <div class="section-label">comunidade</div>
-  <h2 class="section-h2">CONTE SEU <em>CASO</em></h2>
-  <div class="forum-grid">
-    <div class="post-list">
-      <div class="post">
-        <div class="post-head">
-          <div class="post-av" style="background:#FF8FA3; color:#0A0A0A">🦊</div>
-          <div class="post-name">Raposa Anônima</div>
-          <div class="post-time">há 2 dias</div>
-        </div>
-        <div class="post-text">Comecei apostando R$20 por semana. Achei que era lazer. Em 4 meses estava escondendo o extrato bancário. O Aviator parecia que ia pagar qualquer hora...</div>
-        <div class="post-footer">
-          <button class="post-react">❤️ 34</button>
-          <button class="post-react">💬 8</button>
-        </div>
+<section class="section" style="padding-top: 0;">
+  <div class="cta-forum-wrapper">
+    <div class="cta-forum-content">
+      <div class="section-label" style="color: var(--lime);">// rede de apoio anônima</div>
+      
+      <h2 class="section-h2" style="margin-bottom: 20px;">
+        NÃO SOFRA EM <span class="hl-lime">SILÊNCIO.</span>
+      </h2>
+      
+      <p style="font-family: var(--font-b); font-size: 16px; line-height: 1.7; color: rgba(240,237,230,.7); max-width: 600px; margin-bottom: 40px;">
+        O vício em apostas isola, gera vergonha e destrói relações. Nosso fórum é um espaço seguro, sem julgamentos e sem necessidade de cadastro. Leia relatos de quem está passando pelo mesmo ou compartilhe a sua história. Você não está sozinho.
+      </p>
+      
+      <div class="cta-forum-actions">
+        <a href="forum.html" class="btn-main" style="background: var(--lime); color: var(--black);">Acessar o Fórum →</a>
+        <span class="cta-forum-note">Sem login. 100% confidencial.</span>
       </div>
-      <div class="post">
-        <div class="post-head">
-          <div class="post-av" style="background:#C8F135; color:#0A0A0A">🐢</div>
-          <div class="post-name">Tartaruga Verde</div>
-          <div class="post-time">há 5 dias</div>
-        </div>
-        <div class="post-text">Meu pai perdeu o FGTS em bets. Ele tem 54 anos. Os influencers que ele via no YouTube pareciam especialistas de verdade.</div>
-        <div class="post-footer">
-          <button class="post-react">❤️ 61</button>
-          <button class="post-react">💬 15</button>
-        </div>
-      </div>
-      <div class="post">
-        <div class="post-head">
-          <div class="post-av" style="background:#A8D8FF; color:#0A0A0A">🦋</div>
-          <div class="post-name">Borboleta Azul</div>
-          <div class="post-time">há 1 semana</div>
-        </div>
-        <div class="post-text">Fui ao psicólogo por ansiedade e só na terceira sessão percebi que era relacionada às apostas. A sensação de esperar o resultado é viciante de um jeito que eu não entendia.</div>
-        <div class="post-footer">
-          <button class="post-react">❤️ 89</button>
-          <button class="post-react">💬 22</button>
-        </div>
-      </div>
-    </div>
-    <div class="forum-form">
-      <h3>Compartilhe</h3>
-      <p>Anônimo. Sem login. Sua história pode ajudar alguém.</p>
-      <textarea class="forum-ta" placeholder="Conte o que quiser. Pode ser sobre você, um familiar, um amigo..."></textarea>
-      <button class="forum-submit">Publicar anonimamente →</button>
-      <div class="anon-note">// nenhum dado de identificação é registrado</div>
     </div>
   </div>
 </section>
@@ -535,23 +506,22 @@
     <div class="footer-links">
       <h4>Conteúdo</h4>
       <ul>
-        <li><a href="#cards">Área Informativa</a></li>
-        <li><a href="#bets">Sobre as Bets</a></li>
-        <li><a href="#simulador">Simulador</a></li>
-        <li><a href="#casos">Cases Reais</a></li>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Casos Reais</a></li>
       </ul>
     </div>
     <div class="footer-links">
       <h4>Comunidade</h4>
       <ul>
-        <li><a href="#forum">Fórum Anônimo</a></li>
-        <li><a href="#ajuda">Central de Ajuda</a></li>
-        <li><a href="#betblock">BetBlock</a></li>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>// SENAC RIO · ADS 2026.1 · Extensão: Educação Digital</p>
+    <p>// SENAC RIO · ADS Turma 2024.1 · Projeto 2026 · Extensão: Educação Digital</p>
     <p>Feito com propósito, não com lucro.</p>
   </div>
 </footer>

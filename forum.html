@@ -1,10 +1,170 @@
-<a>página referente ao forum</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórum Anônimo - OddZero</title>
 
-<!-- <ul class="nav-links" id="nav-links">
-  <li><a href="bets.html">Sobre as bets</a></li>
-  <li><a href="simulador.html">Simulador</a></li>
-  <li><a href="casos-reais.html">Casos Reais</a></li> 
-  <li><a href="forum.html" class="active-link">Conte sua história</a></li>
-  <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
-  <li><a href="betblock.html" class="nav-btn-special">Baixar BetBlock</a></li>
-</ul> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=block" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/forum.css">
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html" style="color: var(--white);">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<section class="section forum-hero">
+  <div class="section-label">// comunidade livre</div>
+  <h1 class="section-h2" style="margin-bottom: 16px;">CONTE SUA <span class="hl-red">HISTÓRIA</span></h1>
+  <p class="casos-sub">
+    Aqui não há julgamentos, rankings ou recompensas. Apenas histórias reais de quem viveu na pele os impactos das apostas. Um ambiente 100% anônimo para desabafar e apoiar.
+  </p>
+</section>
+
+<div class="forum-body">
+  
+  <div class="filters-row">
+    <div class="filters-left">
+      <button class="pill active" data-filter="todos">Todos</button>
+      <button class="pill" data-filter="Dívidas">💸 Dívidas</button>
+      <button class="pill" data-filter="Família">👨‍👩‍👧 Família</button>
+      <button class="pill" data-filter="Superação">💪 Superação</button>
+      <button class="pill" data-filter="Recaída">🔄 Recaída</button>
+      <button class="pill" data-filter="Outro">📌 Outro</button>
+    </div>
+    <div class="count-badge">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span id="countLabel">Carregando relatos...</span>
+    </div>
+  </div>
+
+  <div class="forum-layout">
+    
+    <div class="feed" id="feed">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">💬</div>
+        <p class="empty-text">Nenhum relato nesta categoria ainda.<br>Seja o primeiro a compartilhar.</p>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      
+      <div class="s-card lime-accent">
+        <div class="s-title lime-text">Faça seu desabafo</div>
+        <p class="s-body">Totalmente anônimo. Sem login. Sua história pode ser o alerta que alguém precisa hoje.</p>
+        <button class="s-cta-btn" onclick="openModal()">Publicar relato →</button>
+        <div class="s-note">// nenhum dado seu será registrado</div>
+      </div>
+
+      <div class="s-card" id="ajuda">
+        <div class="s-title">Precisa de ajuda agora?</div>
+        <div class="resource-list">
+          <a class="resource-item" href="tel:188">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Ligue 188 (CVV 24h)
+          </a>
+          <a class="resource-item" href="https://www.jogadoresanonimos.org.br" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            Jogadores Anônimos
+          </a>
+        </div>
+      </div>
+
+      <div class="s-card">
+        <div class="s-title">Regras do espaço</div>
+        <p class="s-body">Ambiente sem gamificação ou incentivos. Textos que promovam plataformas serão banidos.</p>
+      </div>
+      
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Casos Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS Turma 2024.1 · Projeto 2026 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Novo Relato</div>
+      <button class="close-btn" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="safe-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="safe-note-text">// Privacidade garantida. Use um apelido.</div>
+      </div>
+      
+      <label class="field-label">Apelido</label>
+      <input type="text" class="input-field" id="nameInput" placeholder="Ex: Gato Cansado, João Silva..." maxlength="50">
+      
+      <label class="field-label">Tema Central</label>
+      <div class="tag-selector" id="tagSelector">
+        <button class="tag-option" data-tag="Dívidas">💸 Dívidas</button>
+        <button class="tag-option" data-tag="Família">👨‍👩‍👧 Família</button>
+        <button class="tag-option" data-tag="Superação">💪 Superação</button>
+        <button class="tag-option" data-tag="Recaída">🔄 Recaída</button>
+        <button class="tag-option" data-tag="Outro">📌 Outro</button>
+      </div>
+      
+      <label class="field-label">Sua História</label>
+      <textarea class="input-field" id="textInput" placeholder="Como isso afetou você ou alguém próximo? Desabafe aqui..." maxlength="1500"></textarea>
+      
+      <div class="char-counter" id="charCounter">0 / 1500</div>
+      <button class="submit-btn" id="submitBtn" disabled>Publicar Relato →</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <div class="toast-dot"></div>
+  Relato publicado com sucesso.
+</div>
+
+<script src="assets/js/global.js"></script>
+<script src="assets/js/forum.js"></script>
+</body>
+</html>

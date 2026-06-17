@@ -1,4 +1,64 @@
 /* ═══════════════════════════════
+   HERO COM VÍDEO (AUTOPLAY) - SIMULADOR
+═══════════════════════════════ */
+.hero-video-section {
+  position: relative;
+  height: 95vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#ficha-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.7); /* Máscara escura */
+  z-index: 1;
+}
+
+.hero-video-section .hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px;
+}
+
+.hero-video-section .hero-h1 {
+  font-family: var(--font-h);
+  font-size: clamp(60px, 9vw, 120px);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+}
+
+.hero-video-section p {
+  font-family: var(--font-b);
+  font-size: 18px;
+  color: rgba(240,237,230,.8);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════
    LAYOUT DO SIMULADOR (GRID)
 ═══════════════════════════════ */
 .sim-grid-layout {
@@ -243,3 +303,4 @@
   .sim-grid-layout { grid-template-columns: 1fr; }
   .sim-actions { grid-template-columns: 1fr; }
 }
+
