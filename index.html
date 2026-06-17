@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OddZero</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<!-- ══════════════════════════
+     CURSOR CUSTOMIZADO
+══════════════════════════ -->
+<div class="cur" id="cur"></div>
+
+<!-- ══════════════════════════
+     NAVEGAÇÃO
+══════════════════════════ -->
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  
+  <ul class="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════
+     HERO
+══════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/hero_video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <div class="hero-kicker">Educação digital · bets &amp; apostas</div>
+    <h1 class="hero-h1">
+      O JOGO<br>
+      QUE VOCÊ<br>
+      <span class="line-inv">NUNCA GANHA</span>
+    </h1>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-desc">
+      <strong>Sem filtro, sem influencer.</strong> A realidade das apostas online em dados que você não vai ver nos anúncios.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val">+22M</div>
+        <div class="hero-stat-label">brasileiros apostam</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">R$3bi</div>
+        <div class="hero-stat-label">Bolsa Família em bets</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">95%</div>
+        <div class="hero-stat-label">vai pra banca</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>scroll
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     MARQUEE
+══════════════════════════ -->
+<div class="marquee">
+  <div class="marquee-track" id="mtrack">
+    <span class="marquee-item">RTP 95% → banca sempre ganha<span class="sep">◆</span></span>
+    <span class="marquee-item">Conta demo não é dinheiro real<span class="sep">◆</span></span>
+    <span class="marquee-item">Near-miss = design proposital<span class="sep">◆</span></span>
+    <span class="marquee-item">10,8 milhões com risco<span class="sep">◆</span></span>
+    <span class="marquee-item">De que lado da influência você está?<span class="sep">◆</span></span>
+    <span class="marquee-item">62% acreditam ganhar<span class="sep">◆</span></span>
+    <!-- Duplicado para loop contínuo -->
+    <span class="marquee-item">RTP 95% → banca sempre ganha<span class="sep">◆</span></span>
+    <span class="marquee-item">Conta demo não é dinheiro real<span class="sep">◆</span></span>
+    <span class="marquee-item">Near-miss = design proposital<span class="sep">◆</span></span>
+    <span class="marquee-item">10,8 milhões com risco<span class="sep">◆</span></span>
+    <span class="marquee-item">De que lado da influência você está?<span class="sep">◆</span></span>
+    <span class="marquee-item">62% acreditam ganhar<span class="sep">◆</span></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     CARDS — ÁREA INFORMATIVA
+══════════════════════════ -->
+<section class="section" id="cards">
+  <div class="cards-intro">
+    <div>
+      <h2 class="section-h2">O QUE ELES<br><em>NÃO TE CONTAM</em></h2>
+    </div>
+    <div class="cards-intro-right">
+      <div class="filters">
+          <button class="filter-btn on" onclick="filterCards('todos', this)">Todos</button>
+          <button class="filter-btn" onclick="filterCards('financeiro', this)">Financeiro</button>
+          <button class="filter-btn" onclick="filterCards('psicologia', this)">Psicologia</button>
+          <button class="filter-btn" onclick="filterCards('marketing', this)">Marketing</button>
+      </div>
+      <div class="carousel-hint">arraste para ver mais</div>
+    </div>
+  </div>
+
+  <div class="carousel-container" style="position: relative;">
+  
+    <!-- Seta Esquerda -->
+    <button class="nav-arrow left" onclick="goTo(idx - 1)">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+
+    <div class="carousel-wrap" id="cwrap">
+      <div class="carousel-track" id="ctrack">
+
+        <!-- CARD 1 — Jovens -->
+        <div class="photo-card" data-cat="marketing" onclick="openModal(0)">
+          <!-- Ajuste no object-position usando porcentagem (30% no eixo X) -->
+          <img src="assets/imagens/home/card1.jpg" alt="jovens posando" style="object-position: 30% center;">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">jovens · 16–24 anos</div>
+            <div class="photo-card-stat">30<small>%</small> dos jovens</div>
+            <div class="photo-card-hl">já apostaram online</div>
+            <div class="photo-card-desc">Datafolha 2024: Loot boxes e gacha games normalizam o azar para crianças desde cedo.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(0)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 — Bolsa Família -->
+        <div class="photo-card" data-cat="financeiro" onclick="openModal(1)">
+          <img src="assets/imagens/home/card2.png" alt="pessoas usando celular">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">impacto financeiro</div>
+            <div class="photo-card-stat">R$3<small> bilhões</small></div>
+            <div class="photo-card-hl red">do Bolsa Família em bets</div>
+            <div class="photo-card-desc">Em agosto de 2024, beneficiários apostaram R$3 bilhões em um único mês. Banco Central.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(1)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 — Near-miss -->
+        <div class="photo-card" data-cat="psicologia" onclick="openModal(2)">
+          <img src="assets/imagens/home/card3.png" alt="mãos jogando cartas">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">psicologia · near-miss</div>
+            <div class="photo-card-stat">Aposta 40<small>%</small></div>
+            <div class="photo-card-hl">maior após quase ganhar</div>
+            <div class="photo-card-desc">O "quase" libera mais dopamina que ganhar. É neurociência, não fraqueza.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(2)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 — Influencers -->
+        <div class="photo-card" data-cat="marketing" onclick="openModal(3)">
+          <img src="assets/imagens/home/card4.png" alt="menina digitando">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">influencers</div>
+            <div class="photo-card-stat">62<small>%</small> apostam</div>
+            <div class="photo-card-hl red">pra ganhar dinheiro de verdade</div>
+            <div class="photo-card-desc">O influencer usa conta demo infinita. Você aposta com o seu salário.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(3)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 — RTP -->
+        <div class="photo-card" data-cat="financeiro" onclick="openModal(4)">
+          <img src="assets/imagens/home/card5.jpeg" alt="dinheiro">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">probabilidade · rtp</div>
+            <div class="photo-card-stat">R$50 garantidos</div>
+            <div class="photo-card-hl">para a banca a cada R$1000</div>
+            <div class="photo-card-desc">A banca retém R$50 por rodada automaticamente. Não é azar, é código.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(4)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 — Vício -->
+        <div class="photo-card" data-cat="psicologia" onclick="openModal(5)">
+          <img src="assets/imagens/home/card6.png" alt="celular">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">vício · dependência</div>
+            <div class="photo-card-stat">10,8 milhões</div>
+            <div class="photo-card-hl red">com comportamento de risco</div>
+            <div class="photo-card-desc">LENAD III 2023. Entre menores que apostaram no último ano, 55% apresentaram comportamento de dependência.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(5)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7 — ROLLOVER -->
+        <div class="photo-card" data-cat="financeiro" onclick="openModal(6)">
+          <img src="assets/imagens/home/card7.png" alt="dinheiro e celular">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">financeiro · armadilha</div>
+            <div class="photo-card-stat">Rollover 30x</div>
+            <div class="photo-card-hl">o golpe do bônus "grátis"</div>
+            <div class="photo-card-desc">Para sacar R$300 de bônus, você é obrigado a apostar R$9.000 do seu bolso.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(6)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8 — DESIGN -->
+        <div class="photo-card" data-cat="psicologia" onclick="openModal(7)">
+          <img src="assets/imagens/home/card8.png" alt="tela de aplicativo">
+          <div class="photo-card-body">
+            <div class="photo-card-cat">psicologia · ux/ui</div>
+            <div class="photo-card-stat">Design viciante</div>
+            <div class="photo-card-hl red">apps criados por psicólogos</div>
+            <div class="photo-card-desc">Cada som, cor e delay é milimetricamente calculado para explorar sua impulsividade.</div>
+            <div class="photo-card-cta">
+              <span class="photo-card-more">saiba mais</span>
+              <button class="photo-card-share" onclick="event.stopPropagation(); shareCard(7)">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /carousel-track -->
+    </div><!-- /carousel-wrap -->
+
+    <!-- Seta Direita -->
+    <button class="nav-arrow right" onclick="goTo(idx + 1)">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    
+  </div><!-- /carousel-container -->
+
+  <!-- Pontinhos (Dots) -->
+  <div class="carousel-dots" id="cdots"></div>
+</section>
+
+<!-- ══════════════════════════
+     SOBRE AS BETS (CTA)
+══════════════════════════ -->
+<section class="section section-truque" id="truque">
+  <div class="truque-content">
+    <div class="truque-visual">
+       <img src="assets/imagens/home/fichas.jpg" alt="Fichas de cassino">
+    </div>
+    <div class="truque-text">
+      <h2>
+        ELAS TÊM <span class="hl-lime">NOMES</span><br>
+        DIFERENTES.<br>
+        O TRUQUE<br>
+        <span class="hl-red">É O MESMO.</span>
+      </h2>
+      <p>Esqueça a sorte. As plataformas de apostas não são jogos, são sistemas matemáticos configurados para tirar vantagem de cada jogada sua. Veja como a ilusão de ganhar é o maior produto que eles vendem.</p>
+      <a href="bets.html" class="btn-main">Conhecer a verdade →</a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     A BANCA NÃO JOGA NA SORTE (SIMULADOR CTA)
+══════════════════════════ -->
+<div class="about-section">
+  <div class="about-left">
+    <h2 class="about-big">
+      ELAS TÊM <span class="hl-lime">NOMES</span><br>
+      DIFERENTES.<br>
+      O <span class="hl-red">TRUQUE</span><br>
+      É O MESMO.
+    </h2>
+    <p class="about-body">
+      Tigrinho, Aviator, roletas coloridas. O visual muda para te viciar, mas o código por trás é um clone: o algoritmo nunca joga na sorte. Descubra a verdade sobre como o sistema opera e por que a matemática sempre vai zerar a sua conta.
+    </p>
+    <a href="bets.html" class="btn-main">Conhecer a verdade <span class="arr">→</span></a>
+  </div>
+  
+  <div class="about-right">
+    <!-- Novo Card Demonstrativo "Tech" -->
+    <div class="wl-visual">
+      <div class="wl-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="wl-title">white_label_config.json</span>
+      </div>
+      <div class="wl-body">
+        <div class="wl-line"><span class="wl-key">"nome_plataforma"</span>: <span class="wl-value">"SuaBet"</span>,</div>
+        <div class="wl-line"><span class="wl-key">"tema_visual"</span>: <span class="wl-value">"Tigre / Avião / Roleta"</span>,</div>
+        <div class="wl-line"><span class="wl-key">"cores_viciantes"</span>: <span class="wl-value">true</span>,</div>
+        <br>
+        <div class="wl-line hl-line"><span class="wl-key">"algoritmo_de_lucro"</span>: {</div>
+        <div class="wl-line indent"><span class="wl-key">"vantagem_banca"</span>: <span class="wl-value">"100% Garantida"</span>,</div>
+        <div class="wl-line indent"><span class="wl-key">"chance_usuario"</span>: <span class="wl-value">"0% a longo prazo"</span></div>
+        <div class="wl-line">}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     CTA CASOS REAIS (COM DEPOIMENTO)
+══════════════════════════ -->
+<section class="section cases-cta" id="casos">
+  <div class="cases-cta-content">
+    
+    <!-- Texto -->
+    <div class="cases-cta-text">
+      <div class="section-label">// casos reais</div>
+      <h2 class="section-h2">
+        QUEM JÁ <span class="hl-red">PASSOU</span><br>
+        POR ISSO
+      </h2>
+      <p>Relatos públicos — em depoimentos à CPI das Bets e em reportagens — de pessoas que perderam dinheiro, relações e saúde mental por causa das apostas online. Não são exceções. São o resultado esperado do sistema.</p>
+      <a href="casos-reais.html" class="btn-main">Ver história completa →</a>
+    </div>
+
+    <!-- Vídeo -->
+    <div class="cases-video-frame">
+      <video src="assets/videos/depoimento.mp4" controls poster="assets/imagens/casos/thumb_video.jpg"></video>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     BETBLOCK
+══════════════════════════ -->
+<section class="section" id="betblock" style="border-top: 1px solid #1a1a1a">
+  <div class="section-label">proteção ativa</div>
+  <h2 class="section-h2">INSTALE O <span class="lime">BETBLOCK</span></h2>
+  <div class="betblock-box">
+    <div class="betblock-left">
+      <div class="betblock-icon">🛡️</div>
+      <h3>BetBlock</h3>
+      <p>Detecta URLs de apostas e pausa por 60 segundos mostrando seu histórico real antes de liberar o acesso.</p>
+      <button class="install-btn">🌐 Instalar no Chrome / Firefox</button>
+      <button class="install-btn ghost">📱 Baixar para Android / iOS</button>
+    </div>
+    <div class="betblock-right">
+      <h3>Como funciona</h3>
+      <p>Em vez de bloquear — o que gera rejeição — o BetBlock cria um momento de pausa com informação real antes de você apostar.</p>
+      <ul class="feature-list">
+        <li>Detecta +40 URLs de plataformas de apostas</li>
+        <li>Pausa de 60s com dados do seu histórico</li>
+        <li>Mostra o equivalente real do valor apostado</li>
+        <li>Modo família: bloqueio total para crianças</li>
+        <li>Relatório mensal de acessos evitados</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════
+     FÓRUM
+══════════════════════════ -->
+<section class="section" id="forum" style="border-top: 1px solid #1a1a1a">
+  <div class="section-label">comunidade</div>
+  <h2 class="section-h2">CONTE SEU <em>CASO</em></h2>
+  <div class="forum-grid">
+    <div class="post-list">
+      <div class="post">
+        <div class="post-head">
+          <div class="post-av" style="background:#FF8FA3; color:#0A0A0A">🦊</div>
+          <div class="post-name">Raposa Anônima</div>
+          <div class="post-time">há 2 dias</div>
+        </div>
+        <div class="post-text">Comecei apostando R$20 por semana. Achei que era lazer. Em 4 meses estava escondendo o extrato bancário. O Aviator parecia que ia pagar qualquer hora...</div>
+        <div class="post-footer">
+          <button class="post-react">❤️ 34</button>
+          <button class="post-react">💬 8</button>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-head">
+          <div class="post-av" style="background:#C8F135; color:#0A0A0A">🐢</div>
+          <div class="post-name">Tartaruga Verde</div>
+          <div class="post-time">há 5 dias</div>
+        </div>
+        <div class="post-text">Meu pai perdeu o FGTS em bets. Ele tem 54 anos. Os influencers que ele via no YouTube pareciam especialistas de verdade.</div>
+        <div class="post-footer">
+          <button class="post-react">❤️ 61</button>
+          <button class="post-react">💬 15</button>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-head">
+          <div class="post-av" style="background:#A8D8FF; color:#0A0A0A">🦋</div>
+          <div class="post-name">Borboleta Azul</div>
+          <div class="post-time">há 1 semana</div>
+        </div>
+        <div class="post-text">Fui ao psicólogo por ansiedade e só na terceira sessão percebi que era relacionada às apostas. A sensação de esperar o resultado é viciante de um jeito que eu não entendia.</div>
+        <div class="post-footer">
+          <button class="post-react">❤️ 89</button>
+          <button class="post-react">💬 22</button>
+        </div>
+      </div>
+    </div>
+    <div class="forum-form">
+      <h3>Compartilhe</h3>
+      <p>Anônimo. Sem login. Sua história pode ajudar alguém.</p>
+      <textarea class="forum-ta" placeholder="Conte o que quiser. Pode ser sobre você, um familiar, um amigo..."></textarea>
+      <button class="forum-submit">Publicar anonimamente →</button>
+      <div class="anon-note">// nenhum dado de identificação é registrado</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     AJUDA
+══════════════════════════ -->
+<section class="section" id="ajuda" style="border-top: 1px solid #1a1a1a">
+  <div class="section-label">recursos</div>
+  <h2 class="section-h2">PRECISA DE <em>AJUDA?</em></h2>
+  <div class="lf-grid">
+    <div class="lf-card">
+      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <h3>CVV</h3>
+      <p>Acolhimento emocional gratuito 24h. Ligue 188 ou acesse o chat online.</p>
+      <a href="https://www.cvv.org.br" target="_blank" class="lf-link">cvv.org.br →</a>
+    </div>
+    <div class="lf-card">
+      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+      <h3>CAPS</h3>
+      <p>Atendimento psicológico gratuito pelo SUS para dependência comportamental.</p>
+      <a href="#" class="lf-link">Encontrar o mais próximo →</a>
+    </div>
+    <div class="lf-card">
+      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
+      <h3>Procon</h3>
+      <p>Bet usou influencer pra te enganar? Você pode denunciar formalmente.</p>
+      <a href="#" class="lf-link">Como denunciar →</a>
+    </div>
+    <div class="lf-card">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      <h3>Jogadores Anônimos</h3>
+      <p>Grupos de apoio presenciais e online para dependência de jogos.</p>
+      <a href="https://www.jogadoresanonimos.org.br" target="_blank" class="lf-link">jogadoresanonimos.org.br →</a>
+    </div>
+    <div class="lf-card">
+      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <h3>Bloqueadores infantis</h3>
+      <p>Apps para bloquear acesso de crianças a plataformas de apostas.</p>
+      <a href="#" class="lf-link">Ver apps recomendados →</a>
+    </div>
+    <div class="lf-card">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m14.5 9-5 5"/>
+        <path d="m9.5 9 5 5"/>
+      </svg>
+      <h3>GamBan</h3>
+      <p>Software que bloqueia todas as plataformas no dispositivo por tempo determinado.</p>
+      <a href="https://gamban.com" target="_blank" class="lf-link">gamban.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     FOOTER
+══════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="#cards">Área Informativa</a></li>
+        <li><a href="#bets">Sobre as Bets</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#casos">Cases Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="#forum">Fórum Anônimo</a></li>
+        <li><a href="#ajuda">Central de Ajuda</a></li>
+        <li><a href="#betblock">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS 2026.1 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════
+     MODAL EXPANDIDO
+══════════════════════════ -->
+<div id="overlay" style="
+  position: fixed; inset: 0;
+  background: rgba(10,10,10,.85);
+  backdrop-filter: blur(12px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+">
+  <div id="modal" style="
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 720px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transform: scale(.94) translateY(16px);
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+  "></div>
+</div>
+
+<!-- JavaScript -->
+<script src="assets/js/global.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* ═══════════════════════════════
+   LAYOUT DO SIMULADOR (GRID)
+═══════════════════════════════ */
+.sim-grid-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.sim-result-container {
+  margin-top: 16px;
+}
+
+.sim-box {
+  background: var(--gray);
+  border: 1px solid var(--gray2);
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.sim-box h3 {
+  font-family: var(--font-h);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+/* ═══════════════════════════════
+   FORMULÁRIOS
+═══════════════════════════════ */
+.grupo {
+  margin-bottom: 16px;
+}
+
+.grupo label {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.grupo input, 
+.grupo select {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid var(--gray2);
+  border-radius: 10px;
+  color: var(--white);
+  font-family: var(--font-b);
+  font-size: 15px;
+  cursor: none;
+  transition: all .2s;
+}
+
+.grupo input:focus, 
+.grupo select:focus {
+  outline: none;
+  border-color: var(--lime);
+  background: rgba(255, 255, 255, .08);
+}
+
+.grupo select option {
+  background: var(--gray);
+  color: var(--white);
+}
+
+/* ═══════════════════════════════
+   BOTÕES E LISTAS
+═══════════════════════════════ */
+.btn-secundario {
+  background: rgba(255, 255, 255, .06);
+  color: var(--white);
+  border: 1px solid var(--gray2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-m);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  cursor: none;
+  transition: background .2s;
+  width: 100%;
+}
+
+.btn-secundario:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+.btn-green {
+  border-color: rgba(200, 241, 53, 0.3);
+  color: var(--lime);
+}
+
+.btn-green:hover {
+  background: rgba(200, 241, 53, 0.1);
+}
+
+.sim-cta-button {
+  width: 100%;
+  margin-top: 16px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.sim-cta-button:hover {
+  background: #c42808;
+  transform: translateY(-2px);
+}
+
+.lista {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemLista {
+  background: #111;
+  border: 1px solid var(--gray2);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: rgba(240, 237, 230, .6);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ═══════════════════════════════
+   RESULTADOS (ESTILIZANDO O JS DELE)
+═══════════════════════════════ */
+.result-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  color: var(--muted);
+}
+.icon-placeholder {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.2;
+}
+
+/* Classes geradas pelo JS do colega */
+.resumo, .alerta {
+  background: #111;
+  border: 1px solid var(--gray2);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.alerta {
+  border-color: rgba(232, 50, 10, 0.4);
+  background: rgba(232, 50, 10, 0.05);
+}
+
+.resumo h3, .alerta h3 {
+  font-family: var(--font-h);
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.alerta h3 { color: var(--red); }
+
+.resumo p, .alerta p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(240, 237, 230, .7);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255,255,255,0.05);
+  padding-bottom: 6px;
+}
+
+.alerta ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.alerta li {
+  font-size: 13px;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.positivo { color: var(--lime); font-weight: 700; font-family: var(--font-h); font-size: 18px;}
+.negativo { color: var(--red); font-weight: 700; font-family: var(--font-h); font-size: 18px;}
+
+/* Log Psicológico */
+.log {
+  background: #050505;
+  border: 1px solid var(--gray2);
+  padding: 24px;
+  border-radius: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: rgba(240, 237, 230, .5);
+  line-height: 1.8;
+}
+
+.log b {
+  color: var(--lime);
+  font-size: 13px;
+}
+
+.log hr {
+  border: none;
+  border-top: 1px dashed var(--gray2);
+  margin: 20px 0;
+}
+
+.sim-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .sim-grid-layout { grid-template-columns: 1fr; }
+  .sim-actions { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador - OddZero</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/simulador.css">
+  
+  <!-- Biblioteca para gerar PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<!-- CURSOR CUSTOMIZADO -->
+<div class="cur" id="cur"></div>
+
+<!-- NAVEGAÇÃO -->
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SIMULADOR -->
+<section class="section" style="padding-top: 140px; padding-bottom: 40px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+  <div class="section-label" style="justify-content: center;">// calculando o prejuízo</div>
+  <h1 class="section-h2" style="margin-bottom: 16px; text-align: center;">O JOGO QUE VOCÊ <span class="hl-red">NUNCA GANHA</span></h1>
+  <p class="casos-sub" style="max-width: 800px; margin-top: 0; text-align: center;">
+    Descubra como as apostas afetam seu orçamento ao longo do tempo. Este simulador possui caráter educativo e informativo. Nenhum dado preenchido aqui é armazenado ou compartilhado. Os resultados são estimativas baseadas na matemática real dos algoritmos.
+  </p>
+</section>
+
+<!-- MAIN SIMULADOR GRID -->
+<section class="section" style="padding-top: 0;">
+  <div class="sim-grid-layout">
+    
+    <!-- LADO ESQUERDO: FORMULÁRIOS -->
+    <div class="sim-forms-container">
+      
+      <!-- Informações Financeiras -->
+      <div class="sim-box">
+        <h3>1. Sua Renda Real</h3>
+        <div class="grupo">
+          <label>Salário Mensal Líquido (R$)</label>
+          <input type="number" id="salario" placeholder="Ex: 2500">
+        </div>
+      </div>
+
+      <!-- Contas Básicas -->
+      <div class="sim-box">
+        <h3>2. Contas Fixas (A realidade)</h3>
+        <div class="grupo">
+          <label>Descrição da Conta</label>
+          <input type="text" id="descricaoConta" placeholder="Ex: Aluguel, Luz, Mercado">
+        </div>
+        <div class="grupo">
+          <label>Valor da Conta (R$)</label>
+          <input type="number" id="valorConta" placeholder="Ex: 800">
+        </div>
+        <button class="btn-secundario" onclick="adicionarConta()">+ Adicionar Conta</button>
+        <div class="lista" id="listaContas"></div>
+      </div>
+
+      <!-- Lazer -->
+      <div class="sim-box">
+        <h3>3. Lazer e Hobbies</h3>
+        <div class="grupo">
+          <label>O que você gosta de fazer?</label>
+          <input type="text" id="descricaoLazer" placeholder="Ex: Cinema, Lanche no fds">
+        </div>
+        <div class="grupo">
+          <label>Valor Mensal (R$)</label>
+          <input type="number" id="valorLazer" placeholder="Ex: 150">
+        </div>
+        <button class="btn-secundario" onclick="adicionarLazer()">+ Adicionar Lazer</button>
+        <div class="lista" id="listaLazer"></div>
+      </div>
+
+      <!-- Hábitos de Aposta -->
+      <div class="sim-box" style="border-color: var(--red);">
+        <h3 style="color: var(--red);">4. Hábitos de Aposta</h3>
+        <div class="grupo">
+          <label>Tipo de Aposta Principal</label>
+          <select id="tipoAposta">
+            <option value="esportiva">Aposta Esportiva (Bets)</option>
+            <option value="cassino">Cassino / Tigrinho / Slots</option>
+            <option value="gacha">Loot Box / Gacha</option>
+          </select>
+        </div>
+        <div class="grupo">
+          <label>Valor Médio Apostado por Rodada/Jogo (R$)</label>
+          <input type="number" id="valorAposta" placeholder="Ex: 20">
+        </div>
+        <div class="grupo">
+          <label>Média de Apostas por Dia</label>
+          <select id="apostasDia">
+            <option value="1">1 vez ao dia</option>
+            <option value="3">3 vezes ao dia</option>
+            <option value="5">5 vezes ao dia</option>
+            <option value="10">10 ou mais (Impulsivo)</option>
+          </select>
+        </div>
+        <div class="grupo">
+          <label>Projeção de Tempo</label>
+          <select id="periodo">
+            <option value="1">1 dia (Curto prazo)</option>
+            <option value="7">1 semana</option>
+            <option value="30">1 mês</option>
+            <option value="90">3 meses</option>
+            <option value="180">6 meses (Longo prazo)</option>
+          </select>
+        </div>
+        
+        <button class="btn-main sim-cta-button" onclick="simular()">RODAR SIMULAÇÃO DE PERDA →</button>
+      </div>
+
+    </div>
+
+    <!-- LADO DIREITO: RESULTADOS -->
+    <div class="sim-result-container">
+      <div class="sim-box result-placeholder" id="placeholder-resultado">
+        <div class="icon-placeholder">📊</div>
+        <p>Preencha os dados e rode a simulação para ver o impacto matemático real no seu orçamento.</p>
+      </div>
+      
+      <div id="resultado" style="display: none;"></div>
+
+      <div class="sim-actions" id="botoesAcao" style="display: none;">
+        <button id="btnPdf" class="btn-secundario btn-green" onclick="gerarPDF()">📄 Baixar Relatório (PDF)</button>
+        <button id="btnWhatsapp" class="btn-secundario btn-green" onclick="compartilharWhatsapp()">📱 Compartilhar Resultado</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="index.html#cards">Área Informativa</a></li>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Cases Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS 2026.1 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="assets/js/global.js"></script>
+<script src="assets/js/simulador.js"></script>
+</body>
+</html>

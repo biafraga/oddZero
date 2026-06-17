@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casos Reais - OddZero</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/casos.css">
+</head>
+<body>
+
+<!-- ══════════════════════════
+     CURSOR CUSTOMIZADO
+══════════════════════════ -->
+<div class="cur" id="cur"></div>
+
+<!-- ══════════════════════════
+     NAVEGAÇÃO
+══════════════════════════ -->
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  
+  <ul class="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<section class="section" id="casos" style="border-top: 1px solid #1a1a1a; padding-top: 120px;">
+  <div class="section-label">histórias reais</div>
+  <h2 class="section-h2">QUEM JÁ <em>PASSOU</em> POR ISSO</h2>
+  <p class="casos-sub">Relatos públicos — em depoimentos à CPI das Bets e em reportagens — de pessoas que perderam dinheiro, relações e saúde mental por causa das apostas online. Não são exceções. São o resultado esperado do sistema.</p>
+
+  <div class="casos-grid">
+    
+    <!-- CASO 1 — André -->
+    <div class="caso-card" onclick="openStory(0)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/andre.jpg" alt="André Rolim">
+        </div>
+        <div class="caso-info">
+          <h3>André Rolim, 44</h3>
+          <div class="caso-role">Empresário</div>
+          <div class="caso-tag">ex-viciado ouvido pela CPI das Bets</div>
+        </div>
+      </div>
+      <div class="caso-headline">Perdeu casa, carro e quase a família</div>
+      <p class="caso-summary">Conviveu por 20 anos com a compulsão por apostas. O que começou como entretenimento se transformou em dívidas, perdas patrimoniais e crises familiares severas.</p>
+      <div class="caso-label">o que ele relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">🏠</div>
+          <div class="ci-text"><h4>Perda da casa</h4><p>Perdeu o imóvel conquistado com anos de trabalho.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">🚗</div>
+          <div class="ci-text"><h4>Perda do carro</h4><p>Vendido para tentar cobrir dívidas com apostas.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">🏦</div>
+          <div class="ci-text"><h4>Dívidas com bancos e agiotas</h4><p>Ciclo de perdas e tentativas desesperadas de recuperação.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">⚠️</div>
+          <div class="ci-text"><h4>Ideação suicida</h4><p>Pensamentos suicidas em meio ao desespero e às perdas.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(0)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 2 — Catarina -->
+    <div class="caso-card" onclick="openStory(1)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/catarina.jpg" alt="Catarina Silva">
+        </div>
+        <div class="caso-info">
+          <h3>Catarina, 28</h3>
+          <div class="caso-role">Designer gráfica</div>
+          <div class="caso-tag">usou o Bolsa Família da mãe em bets</div>
+        </div>
+      </div>
+      <div class="caso-headline">Apostava pra aliviar a ansiedade — e perdeu o controle</div>
+      <p class="caso-summary">As apostas começaram como distração e alívio de ansiedade. Com o tempo, virou necessidade — e trouxe consequências devastadoras pra ela e pra família.</p>
+      <div class="caso-label">o que ela relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">🎮</div>
+          <div class="ci-text"><h4>Começou "só por diversão"</h4><p>Pequenas apostas de R$10–20 em bingo online.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">💳</div>
+          <div class="ci-text"><h4>Dívidas e empréstimos</h4><p>Acumulou mais de R$5 mil em dívidas e aluguel atrasado.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">👨‍👩‍👧</div>
+          <div class="ci-text"><h4>Bolsa Família da mãe</h4><p>Usou o benefício da mãe pra tentar recuperar perdas — e perdeu tudo.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">😰</div>
+          <div class="ci-text"><h4>Crise de ansiedade e ideação suicida</h4><p>Chegou a pensar em tirar a própria vida.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(1)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 3 — Gustavo -->
+    <div class="caso-card" onclick="openStory(2)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/gustavo.jpg" alt="Gustavo Henrique">
+        </div>
+        <div class="caso-info">
+          <h3>Gustavo, 25</h3>
+          <div class="caso-role">Gestor comercial</div>
+          <div class="caso-tag">começou apostando "por diversão"</div>
+        </div>
+      </div>
+      <div class="caso-headline">R$80 mil em dívidas — e demissão</div>
+      <p class="caso-summary">Um ganho inicial de R$90 mil em um mês o convenceu a pedir demissão pra "viver de apostas". A virada veio rápido — e foi muito mais cara.</p>
+      <div class="caso-label">o que ele relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text"><h4>Apostava durante o expediente</h4><p>Acompanhava jogos e apostava fingindo trabalhar.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">💼</div>
+          <div class="ci-text"><h4>Foi demitido</h4><p>A compulsão afetou seu desempenho até a demissão, em 2022.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">💸</div>
+          <div class="ci-text"><h4>R$80 mil em dívidas</h4><p>Empréstimos pra "recuperar" o prejuízo só aumentaram o buraco.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(2)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 4 — Amanda -->
+    <div class="caso-card" onclick="openStory(3)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/amanda.jpg" alt="Amanda Ferreira">
+        </div>
+        <div class="caso-info">
+          <h3>Amanda, 56</h3>
+          <div class="caso-role">Administradora</div>
+          <div class="caso-tag">perdeu R$120 mil em 3 dias</div>
+        </div>
+      </div>
+      <div class="caso-headline">A casa da família virou aposta — e desapareceu em 3 dias</div>
+      <p class="caso-summary">Um anúncio no Instagram e um depósito de R$20 abriram a porta. O dinheiro da venda da casa da família foi apostado — e perdido — em 3 dias.</p>
+      <div class="caso-label">o que ela relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">📲</div>
+          <div class="ci-text"><h4>Começou por um anúncio</h4><p>Depositou R$20 e transformou em R$200 na primeira tentativa.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">🏠</div>
+          <div class="ci-text"><h4>R$120 mil perdidos em 3 dias</h4><p>Dinheiro da venda da casa da família, apostado integralmente.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">🏦</div>
+          <div class="ci-text"><h4>Dívidas com 4 agiotas</h4><p>Deixou de comprar remédios pra continuar apostando.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">⚠️</div>
+          <div class="ci-text"><h4>Tentativa de suicídio</h4><p>Hoje em acompanhamento no CAPS e tratamento psiquiátrico.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(3)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 5 — Marcelo -->
+    <div class="caso-card" onclick="openStory(4)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/marcelo.jpg" alt="Marcelo">
+        </div>
+        <div class="caso-info">
+          <h3>Marcelo (nome fictício), 45</h3>
+          <div class="caso-role">Dentista</div>
+          <div class="caso-tag">acumulou R$400 mil em dívidas</div>
+        </div>
+      </div>
+      <div class="caso-headline">O vício custou R$400 mil e quase destruiu sua família</div>
+      <p class="caso-summary">Começou nas apostas esportivas e migrou para cassinos online. As dívidas cresceram até fugir completamente do controle.</p>
+      <div class="caso-label">o que ele relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">🏦</div>
+          <div class="ci-text"><h4>R$400 mil em dívidas</h4><p>Empréstimos e financiamentos acumulados.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">👨‍👩‍👧</div>
+          <div class="ci-text"><h4>Impacto familiar</h4><p>Comprometeu recursos da família.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text"><h4>Apostas diárias</h4><p>Passava horas conectado às plataformas.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">⚖️</div>
+          <div class="ci-text"><h4>Interdição judicial</h4><p>A família recorreu à Justiça para protegê-lo.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(4)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 6 — Lucas -->
+    <div class="caso-card" onclick="openStory(5)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/marcelo.jpg" alt="Lucas">
+        </div>
+        <div class="caso-info">
+          <h3>Lucas (nome fictício), 27</h3>
+          <div class="caso-role">Analista de vendas</div>
+          <div class="caso-tag">perdeu mais de R$100 mil</div>
+        </div>
+      </div>
+      <div class="caso-headline">Tentando recuperar perdas, afundou em dívidas e ameaças</div>
+      <p class="caso-summary">O que começou como apostas esportivas ocasionais se transformou em um ciclo de empréstimos, mentiras e prejuízos.</p>
+      <div class="caso-label">o que ele relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">🏦</div>
+          <div class="ci-text"><h4>Mais de R$100 mil perdidos</h4><p>Entre apostas, empréstimos e tentativas de recuperação.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">👨‍👩‍👧</div>
+          <div class="ci-text"><h4>Uso da previdência privada</h4><p>Sacou dinheiro destinado ao próprio futuro.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text"><h4>Mentiras para a família</h4><p>Escondeu durante meses o tamanho do prejuízo.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">⚖️</div>
+          <div class="ci-text"><h4>Cobranças de agiotas</h4><p>A mãe precisou ajudá-lo a escapar das ameaças.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(5)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 7 — Adriano -->
+    <div class="caso-card" onclick="openStory(6)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-avatar">
+          <img src="assets/imagens/casos/marcelo.jpg" alt="Adriano">
+        </div>
+        <div class="caso-info">
+          <h3>Adriano Monteiro, 38</h3>
+          <div class="caso-role">Técnico em eletrônica e youtuber</div>
+          <div class="caso-tag">Perdeu R$170 mil perseguindo uma recuperação</div>
+        </div>
+      </div>
+      <div class="caso-headline">Transformou um hobby em um prejuízo de R$170 mil</div>
+      <p class="caso-summary">O que começou como apostas esportivas ocasionais se transformou em anos de prejuízos acumulados.</p>
+      <div class="caso-label">o que ele relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">🏦</div>
+          <div class="ci-text"><h4>R$170 mil perdidos</h4><p>Anos de apostas consumiram suas economias.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">👨‍👩‍👧</div>
+          <div class="ci-text"><h4>Venda do carro</h4><p>Precisou vender patrimônio para lidar com os prejuízos.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text"><h4>Ciclo de recuperação</h4><p>Cada perda gerava uma nova tentativa de recuperar dinheiro.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">⚖️</div>
+          <div class="ci-text"><h4>Transformou dor em alerta</h4><p>Hoje compartilha sua experiência para conscientizar outras pessoas.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(6)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- CASO 8 — Apostador com Ludopatia -->
+    <div class="caso-card" onclick="openStory(7)" style="cursor: pointer;">
+      <div class="caso-top">
+        <div class="caso-info">
+          <h3>Apostador com Ludopatia</h3>
+          <div class="caso-role">Recebeu decisão judicial favorável</div>
+          <div class="caso-tag">Perdeu R$122 mil antes de conseguir ajuda</div>
+        </div>
+      </div>
+      <div class="caso-headline">A ludopatia custou R$122 mil e uma batalha judicial</div>
+      <p class="caso-summary">Diagnosticado com ludopatia, o apostador perdeu mais de R$122 mil em plataformas de apostas online antes de conseguir recorrer.</p>
+      <div class="caso-label">o que ele relatou</div>
+      <div class="caso-items">
+        <div class="caso-item">
+          <div class="ci-icon">🏦</div>
+          <div class="ci-text"><h4>R$122 mil perdidos</h4><p>A compulsão pelo jogo foi reconhecida por especialistas.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">👨‍👩‍👧</div>
+          <div class="ci-text"><h4>Caso chegou à Justiça</h4><p>Buscou reparação após perdas causadas pelo vício.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text"><h4>R$61 mil restituídos</h4><p>A Justiça determinou a devolução de parte dos prejuízos.</p></div>
+        </div>
+        <div class="caso-item">
+          <div class="ci-icon">⚖️</div>
+          <div class="ci-text"><h4>Impacto emocional</h4><p>A compulsão trouxe sofrimento psicológico e perda de controle.</p></div>
+        </div>
+      </div>
+      <div class="caso-actions">
+        <button class="caso-btn">Ver história completa →</button>
+        <button class="caso-share" onclick="event.stopPropagation(); shareCaseWhatsApp(7)" aria-label="Compartilhar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     FOOTER
+══════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="index.html#cards">Área Informativa</a></li>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Cases Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS 2026.1 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════
+     MODAL — HISTÓRIAS / CASOS REAIS
+══════════════════════════ -->
+<div id="story-overlay" class="story-overlay">
+  <div id="story-modal" class="story-modal"></div>
+</div>
+
+<!-- JavaScript -->
+<script src="assets/js/global.js"></script>
+<script src="assets/js/casos.js"></script>
+</body>
+</html>
