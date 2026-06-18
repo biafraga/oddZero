@@ -224,9 +224,6 @@ function openModal(i) {
   const d  = modalData[i];
   const ov = document.getElementById('overlay');
   const mo = document.getElementById('modal');
-
-  // A MÁGICA QUE RESOLVE O BUG DA GUILHOTINA:
-  // Obriga a grade a respeitar o tamanho do modal, destravando o scroll
   mo.style.gridTemplateRows = 'minmax(0, 1fr)';
 
   mo.innerHTML = `
@@ -306,3 +303,56 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
 
+/* ═══════════════════════════════
+   ANIMAÇÃO DOS BALÕES DO CTA DO FORUM
+═══════════════════════════════ */
+
+(function () {
+  const relatos = [
+    { tag: 'Recuperação', r: false, text: '"Perdi <strong>R$14.000</strong> em 3 meses. Hoje são 60 dias sem apostar."', foot: '❤ 84 · há 2h', cls: 'accent' },
+    { tag: 'Alerta',      r: true,  text: '"Percebi que estava <strong>mentindo pra minha família</strong> pra conseguir dinheiro."', foot: '❤ 52 · há 5h', cls: 'red-acc' },
+    { tag: 'Desabafo',    r: false, text: '"Apostei <strong>o aluguel.</strong> Não sei o que fazer."', foot: '❤ 31 · há 1h', cls: '' },
+    { tag: 'Ajuda',       r: true,  text: '"Já tentei parar três vezes. <strong>Minha família não sabe.</strong>"', foot: '❤ 67 · há 3h', cls: 'red-acc' },
+    { tag: 'Superação',   r: false, text: '"6 meses limpo. <strong>Valeu a pena</strong> pedir ajuda."', foot: '❤ 120 · há 8h', cls: 'accent' },
+    { tag: 'Desabafo',    r: true,  text: '"O app fica me mandando <strong>notificações o dia todo.</strong>"', foot: '❤ 44 · há 6h', cls: '' },
+    { tag: 'Recuperação', r: false, text: '"Bloqueei todos os sites. <strong>Dia 1 de novo.</strong>"', foot: '❤ 38 · há 30min', cls: 'accent' },
+    { tag: 'Alerta',      r: true,  text: '"Percebi que <strong>só fico feliz apostando.</strong> Isso é um sinal?"', foot: '❤ 29 · há 4h', cls: '' },
+  ];
+
+  const cols = [14, 47, 80];
+  const field = document.getElementById('forumBubbles');
+  if (!field) return;
+
+  function spawnLoop(colPct) {
+    const r = relatos[Math.floor(Math.random() * relatos.length)];
+    const el = document.createElement('div');
+    el.className = 'forum-bubble ' + r.cls;
+
+    const dur = 12 + Math.random() * 4;
+    const xJitter = (Math.random() - 0.5) * 8;
+
+    el.innerHTML = `
+      <div class="bubble-tag${r.r ? ' red' : ''}">${r.tag}</div>
+      <div class="bubble-text">${r.text}</div>
+      <div class="bubble-foot">${r.foot}</div>
+    `;
+    el.style.cssText = `
+      left: ${colPct + xJitter}%;
+      bottom: -220px;
+      transform: translateX(-50%);
+      animation-duration: ${dur}s;
+      animation-delay: 0s;
+    `;
+    field.appendChild(el);
+
+    const gap = 2 + Math.random() * 2;
+    setTimeout(() => {
+      el.remove();
+      spawnLoop(colPct);
+    }, (dur + gap) * 1000);
+  }
+
+  cols.forEach((colPct, i) => {
+    setTimeout(() => spawnLoop(colPct), i * 4000);
+  });
+})();

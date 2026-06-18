@@ -766,6 +766,97 @@
 }
 
 /* ═══════════════════════════════
+   SEÇÃO: FORUM
+═══════════════════════════════ */
+.cta-forum-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  border: 1px solid var(--gray2);
+  border-left: 5px solid var(--lime);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--gray);
+  min-height: 480px;
+}
+
+.cta-forum-content {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.forum-bubbles {
+  position: relative;
+  overflow: hidden;
+  background: #0d0d0d;
+  border-left: 1px solid var(--gray2);
+}
+
+.forum-bubble {
+  position: absolute;
+  background: #181818;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 16px;
+  padding: 18px 20px;
+  width: 200px;
+  animation: bubbleFloat linear infinite;
+  will-change: transform, opacity;
+}
+.forum-bubble.accent {
+  border-color: rgba(200,241,53,.25);
+  background: #141d08;
+}
+.forum-bubble.red-acc {
+  border-color: rgba(232,50,10,.22);
+  background: #180e0c;
+}
+
+.bubble-tag {
+  font-family: var(--font-m);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 9px;
+}
+.bubble-tag.red { color: var(--red); }
+
+.bubble-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(240,237,230,.65);
+}
+.bubble-text strong { color: rgba(240,237,230,.92); }
+
+.bubble-foot {
+  margin-top: 10px;
+  font-size: 10px;
+  color: rgba(240,237,230,.28);
+}
+
+
+@keyframes bubbleFloat {
+  0%   { transform: translateY(0);      opacity: 0; }
+  6%   { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateY(-600px); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .cta-forum-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .forum-bubbles {
+    height: 300px;
+    border-left: none;
+    border-top: 1px solid var(--gray2);
+  }
+}
+
+/* ═══════════════════════════════
    SEÇÕES LOW-FI (AJUDA ETC.)
 ═══════════════════════════════ */
 .lf-grid {
@@ -912,67 +1003,6 @@
 }
 
 /* ═══════════════════════════════
-   CTA FÓRUM (HOME)
-═══════════════════════════════ */
-.cta-forum-wrapper {
-  background: var(--gray);
-  border: 1px solid var(--gray2);
-  border-left: 6px solid var(--lime);
-  border-radius: 20px;
-  padding: 80px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* O ícone gigante e quase invisível de fundo para dar textura */
-.cta-forum-wrapper::after {
-  content: '💬';
-  font-size: 350px;
-  position: absolute;
-  right: -50px;
-  bottom: -100px;
-  opacity: 0.03;
-  pointer-events: none;
-  filter: grayscale(100%);
-}
-
-.cta-forum-content {
-  position: relative;
-  z-index: 2;
-}
-
-.cta-forum-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.cta-forum-note {
-  font-family: var(--font-m);
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-/* Responsividade do CTA */
-@media (max-width: 768px) {
-  .cta-forum-wrapper {
-    padding: 40px 24px;
-  }
-  .cta-forum-actions {
-    gap: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* ═══════════════════════════════
    RESPONSIVE ESPECÍFICO HOME
 ═══════════════════════════════ */
 @media (max-width: 768px) {
@@ -1026,3 +1056,4 @@
     object-position: center;
   }
 }
+
