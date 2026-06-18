@@ -18,10 +18,9 @@
   align-items: start;
 }
 /* ═══════════════════════════════
-   VÍDEO DO HERO
+   HERO COM IMAGEM - FÓRUM
 ═══════════════════════════════ */
-/* Hero Imersivo para o Fórum */
-.hero-video-section {
+.hero-image-section {
   position: relative;
   height: 80vh;
   min-height: 400px;
@@ -32,7 +31,7 @@
   margin-bottom: 40px;
 }
 
-.video-container {
+.image-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -41,13 +40,14 @@
   z-index: 0;
 }
 
-.video-container video {
+.image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.video-overlay {
+.image-overlay {
   position: absolute;
   top: 0;
   left: 0;

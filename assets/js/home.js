@@ -356,3 +356,4 @@ document.addEventListener('keydown', e => {
     setTimeout(() => spawnLoop(colPct), i * 4000);
   });
 })();
+

@@ -51,3 +51,13 @@ if (mobileBtn && navMenu) {
     });
   });
 }
+
+// Ativa e desativa o menu mobile
+const menuBtn = document.getElementById('mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
