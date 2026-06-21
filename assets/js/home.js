@@ -304,56 +304,64 @@ document.addEventListener('keydown', e => {
 });
 
 /* ═══════════════════════════════
-   ANIMAÇÃO DOS BALÕES DO CTA DO FORUM
+   ANIMAÇÃO DO CHAT (CTA DO FORUM)
 ═══════════════════════════════ */
-
 (function () {
   const relatos = [
-    { tag: 'Recuperação', r: false, text: '"Perdi <strong>R$14.000</strong> em 3 meses. Hoje são 60 dias sem apostar."', foot: '❤ 84 · há 2h', cls: 'accent' },
-    { tag: 'Alerta',      r: true,  text: '"Percebi que estava <strong>mentindo pra minha família</strong> pra conseguir dinheiro."', foot: '❤ 52 · há 5h', cls: 'red-acc' },
-    { tag: 'Desabafo',    r: false, text: '"Apostei <strong>o aluguel.</strong> Não sei o que fazer."', foot: '❤ 31 · há 1h', cls: '' },
-    { tag: 'Ajuda',       r: true,  text: '"Já tentei parar três vezes. <strong>Minha família não sabe.</strong>"', foot: '❤ 67 · há 3h', cls: 'red-acc' },
-    { tag: 'Superação',   r: false, text: '"6 meses limpo. <strong>Valeu a pena</strong> pedir ajuda."', foot: '❤ 120 · há 8h', cls: 'accent' },
-    { tag: 'Desabafo',    r: true,  text: '"O app fica me mandando <strong>notificações o dia todo.</strong>"', foot: '❤ 44 · há 6h', cls: '' },
-    { tag: 'Recuperação', r: false, text: '"Bloqueei todos os sites. <strong>Dia 1 de novo.</strong>"', foot: '❤ 38 · há 30min', cls: 'accent' },
-    { tag: 'Alerta',      r: true,  text: '"Percebi que <strong>só fico feliz apostando.</strong> Isso é um sinal?"', foot: '❤ 29 · há 4h', cls: '' },
+    { tag: 'Recuperação', r: false, text: '"Perdi <strong>R$14.000</strong> em 3 meses. Hoje são 60 dias sem apostar."' },
+    { tag: 'Alerta',      r: true,  text: '"Percebi que estava <strong>mentindo pra minha família</strong> pra conseguir dinheiro."' },
+    { tag: 'Desabafo',    r: false, text: '"Apostei <strong>o aluguel.</strong> Não sei o que fazer."' },
+    { tag: 'Ajuda',       r: true,  text: '"Já tentei parar três vezes. <strong>Minha família não sabe.</strong>"' },
+    { tag: 'Superação',   r: false, text: '"6 meses limpo. <strong>Valeu a pena</strong> pedir ajuda."' },
+    { tag: 'Desabafo',    r: true,  text: '"O app fica me mandando <strong>notificações o dia todo.</strong>"' },
+    { tag: 'Recuperação', r: false, text: '"Bloqueei todos os sites. <strong>Dia 1 de novo.</strong>"' }
   ];
 
-  const cols = [14, 47, 80];
-  const field = document.getElementById('forumBubbles');
-  if (!field) return;
+  const chatFeed = document.getElementById('chat-feed');
+  const typingIndicator = document.getElementById('typing-indicator');
+  if (!chatFeed || !typingIndicator) return;
 
-  function spawnLoop(colPct) {
-    const r = relatos[Math.floor(Math.random() * relatos.length)];
-    const el = document.createElement('div');
-    el.className = 'forum-bubble ' + r.cls;
+  let msgIndex = 0;
 
-    const dur = 12 + Math.random() * 4;
-    const xJitter = (Math.random() - 0.5) * 8;
+  function addMessage() {
+    typingIndicator.classList.add('active');
 
-    el.innerHTML = `
-      <div class="bubble-tag${r.r ? ' red' : ''}">${r.tag}</div>
-      <div class="bubble-text">${r.text}</div>
-      <div class="bubble-foot">${r.foot}</div>
-    `;
-    el.style.cssText = `
-      left: ${colPct + xJitter}%;
-      bottom: -220px;
-      transform: translateX(-50%);
-      animation-duration: ${dur}s;
-      animation-delay: 0s;
-    `;
-    field.appendChild(el);
+    const typeDelay = Math.random() * 1500 + 1000;
 
-    const gap = 2 + Math.random() * 2;
     setTimeout(() => {
-      el.remove();
-      spawnLoop(colPct);
-    }, (dur + gap) * 1000);
+      typingIndicator.classList.remove('active');
+
+      const r = relatos[msgIndex];
+      const el = document.createElement('div');
+      const isUser = Math.random() > 0.5 ? 'user-msg' : '';
+      el.className = `chat-msg ${isUser}`;
+      const tagColor = r.r ? 'var(--red)' : 'var(--lime)';
+
+      el.innerHTML = `
+        <span class="chat-meta" style="color: ${tagColor}">${r.tag}</span>
+        ${r.text}
+      `;
+
+      chatFeed.appendChild(el);
+
+      chatFeed.scrollTo({
+        top: chatFeed.scrollHeight,
+        behavior: 'smooth'
+      });
+
+      if (chatFeed.children.length > 5) {
+        chatFeed.removeChild(chatFeed.firstChild);
+      }
+
+      msgIndex = (msgIndex + 1) % relatos.length;
+
+      const waitDelay = Math.random() * 2000 + 2000;
+      setTimeout(addMessage, waitDelay);
+
+    }, typeDelay);
   }
 
-  cols.forEach((colPct, i) => {
-    setTimeout(() => spawnLoop(colPct), i * 4000);
-  });
+  // Começa a animação 1 segundo após o site carregar
+  setTimeout(addMessage, 1000);
 })();
 
