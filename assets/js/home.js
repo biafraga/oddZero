@@ -304,6 +304,40 @@ document.addEventListener('keydown', e => {
 });
 
 /* ═══════════════════════════════
+   ANIMAÇÃO DO TEASER DO SIMULADOR
+═══════════════════════════════ */
+(function() {
+  const counterEl = document.getElementById('st-counter');
+  if (!counterEl) return;
+
+  let loss = 0;
+  let interval;
+
+  function runSimulation() {
+    loss = 0;
+    counterEl.style.color = 'var(--white)';
+    
+    interval = setInterval(() => {
+      // Cai caoticamente entre 20 e 150 reais por "tick"
+      loss += Math.random() * 130 + 20; 
+      
+      // Formata pra Moeda
+      counterEl.textContent = `- R$ ${loss.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+      // Se bater 3.500 reais de perda, a simulação "crasha" e reinicia
+      if (loss > 3500) {
+        clearInterval(interval);
+        counterEl.style.color = 'var(--red)'; // Fica vermelho no fim
+        setTimeout(runSimulation, 1500); // Pausa 1.5s e recomeça o loop
+      }
+    }, 40); // Atualiza a cada 40 milissegundos (super rápido)
+  }
+
+  // Inicia a animação de fundo
+  runSimulation();
+})();
+
+/* ═══════════════════════════════
    ANIMAÇÃO DO CHAT (CTA DO FORUM)
 ═══════════════════════════════ */
 (function () {

@@ -371,24 +371,27 @@
     <a href="simulador.html" class="btn-main">Simular minha perda<span class="arr">→</span></a>
   </div>
   
-  <div class="about-right">
-    <!-- Novo Card Demonstrativo "Tech" -->
-    <div class="wl-visual">
-      <div class="wl-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="wl-title">white_label_config.json</span>
+<div class="about-right">
+    <div class="sim-teaser-box">
+      <div class="st-header">
+        <span class="st-dot pulse"></span>
+        <span class="st-title">STATUS: DRENANDO SALDO</span>
       </div>
-      <div class="wl-body">
-        <div class="wl-line"><span class="wl-key">"nome_plataforma"</span>: <span class="wl-value">"SuaBet"</span>,</div>
-        <div class="wl-line"><span class="wl-key">"tema_visual"</span>: <span class="wl-value">"Tigre / Avião / Roleta"</span>,</div>
-        <div class="wl-line"><span class="wl-key">"cores_viciantes"</span>: <span class="wl-value">true</span>,</div>
-        <br>
-        <div class="wl-line hl-line"><span class="wl-key">"algoritmo_de_lucro"</span>: {</div>
-        <div class="wl-line indent"><span class="wl-key">"vantagem_banca"</span>: <span class="wl-value">"100% Garantida"</span>,</div>
-        <div class="wl-line indent"><span class="wl-key">"chance_usuario"</span>: <span class="wl-value">"0% a longo prazo"</span></div>
-        <div class="wl-line">}</div>
+      
+      <div class="st-body">
+        <div class="st-label">PROJEÇÃO DE PERDA ACUMULADA</div>
+        <div class="st-value" id="st-counter">- R$ 0,00</div>
+        
+        <div class="st-graph">
+          <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+            <polyline points="0,5 20,8 40,25 60,18 80,35 100,38" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="graph-line"/>
+            <polygon points="0,40 0,5 20,8 40,25 60,18 80,35 100,38 100,40" fill="rgba(232, 50, 10, 0.1)" />
+          </svg>
+        </div>
+      </div>
+      
+      <div class="st-footer">
+        <div class="st-code">while (user.balance > 0) { house.win(); }</div>
       </div>
     </div>
   </div>
@@ -461,84 +464,161 @@
 <!-- ══════════════════════════
      BETBLOCK
 ══════════════════════════ -->
-<section class="section" id="betblock" style="border-top: 1px solid #1a1a1a">
-  <div class="section-label">proteção ativa</div>
-  <h2 class="section-h2">INSTALE O <span class="lime">BETBLOCK</span></h2>
-  <div class="betblock-box">
-    <div class="betblock-left">
-      <div class="betblock-icon">🛡️</div>
-      <h3>BetBlock</h3>
-      <p>Detecta URLs de apostas e pausa por 60 segundos mostrando seu histórico real antes de liberar o acesso.</p>
-      <button class="install-btn">🌐 Instalar no Chrome / Firefox</button>
-      <button class="install-btn ghost">📱 Baixar para Android / iOS</button>
+<section class="section" id="betblock" style="border-top: 1px solid #1a1a1a; padding-top: 100px; padding-bottom: 100px;">
+  <div class="section-label" style="color: var(--lime);">// proteção ativa</div>
+  <h2 class="section-h2" style="margin-bottom: 60px;">INSTALE O <span class="hl-lime">BETBLOCK</span></h2>
+  
+  <div class="betblock-layout">
+    
+    <!-- Lado Esquerdo: Texto Limpo e CTAs -->
+    <div class="betblock-content">
+      <h3 style="font-family: var(--font-h); font-size: 32px; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;">O Escudo Anti-Dopamina</h3>
+      <p style="font-size: 16px; line-height: 1.7; color: rgba(240,237,230,.7); margin-bottom: 32px; max-width: 480px;">
+        Em vez de apenas bloquear — o que gera frustração —, o BetBlock intercepta a URL e impõe uma pausa de 60 segundos exibindo o seu histórico real de perdas. Uma intervenção direta no sistema de recompensa antes da aposta acontecer.
+      </p>
+      
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <button class="btn-main" style="background: var(--lime); color: var(--black);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          Instalar no Navegador
+        </button>
+      </div>
     </div>
-    <div class="betblock-right">
-      <h3>Como funciona</h3>
-      <p>Em vez de bloquear — o que gera rejeição — o BetBlock cria um momento de pausa com informação real antes de você apostar.</p>
-      <ul class="feature-list">
-        <li>Detecta +40 URLs de plataformas de apostas</li>
-        <li>Pausa de 60s com dados do seu histórico</li>
-        <li>Mostra o equivalente real do valor apostado</li>
-        <li>Modo família: bloqueio total para crianças</li>
-        <li>Relatório mensal de acessos evitados</li>
-      </ul>
+    
+    <!-- Lado Direito: A Janela de Terminal Solta -->
+    <div class="betblock-visual">
+      <div class="wl-visual">
+        <div class="wl-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="wl-title">betblock_interceptor.js</span>
+        </div>
+        <div class="wl-body">
+          <div class="wl-line"><span class="wl-key">"status_extensao"</span>: <span class="wl-value">"Ativo"</span>,</div>
+          <div class="wl-line"><span class="wl-key">"url_detectada"</span>: <span class="wl-value">"cassino-online.bet"</span>,</div>
+          <div class="wl-line"><span class="wl-key">"acao"</span>: <span class="wl-value" style="color: var(--red);">"ACESSO INTERCEPTADO"</span>,</div>
+          <br>
+          <div class="wl-line hl-line" style="border-left-color: var(--lime); background: rgba(200, 241, 53, 0.08);"><span class="wl-key">"intervencao_usuario"</span>: {</div>
+          <div class="wl-line indent"><span class="wl-key">"pausa_forcada"</span>: <span class="wl-value">"60 segundos"</span>,</div>
+          <div class="wl-line indent"><span class="wl-key">"mostrar_historico"</span>: <span class="wl-value">true</span>,</div>
+          <div class="wl-line indent"><span class="wl-key">"total_perdido_mes"</span>: <span class="wl-value" style="color: var(--red);">"R$ 850,00"</span></div>
+          <div class="wl-line">}</div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ══════════════════════════
      AJUDA
 ══════════════════════════ -->
-<section class="section" id="ajuda" style="border-top: 1px solid #1a1a1a">
-  <div class="section-label">recursos</div>
-  <h2 class="section-h2">PRECISA DE <em>AJUDA?</em></h2>
-  <div class="lf-grid">
-    <div class="lf-card">
-      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-      <h3>CVV</h3>
-      <p>Acolhimento emocional gratuito 24h. Ligue 188 ou acesse o chat online.</p>
-      <a href="https://www.cvv.org.br" target="_blank" class="lf-link">cvv.org.br →</a>
-    </div>
-    <div class="lf-card">
-      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
-      <h3>CAPS</h3>
-      <p>Atendimento psicológico gratuito pelo SUS para dependência comportamental.</p>
-      <a href="#" class="lf-link">Encontrar o mais próximo →</a>
-    </div>
-    <div class="lf-card">
-      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
-      <h3>Procon</h3>
-      <p>Bet usou influencer pra te enganar? Você pode denunciar formalmente.</p>
-      <a href="#" class="lf-link">Como denunciar →</a>
-    </div>
-    <div class="lf-card">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-      <h3>Jogadores Anônimos</h3>
-      <p>Grupos de apoio presenciais e online para dependência de jogos.</p>
-      <a href="https://www.jogadoresanonimos.org.br" target="_blank" class="lf-link">jogadoresanonimos.org.br →</a>
-    </div>
-    <div class="lf-card">
-      <div class="lf-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-      <h3>Bloqueadores infantis</h3>
-      <p>Apps para bloquear acesso de crianças a plataformas de apostas.</p>
-      <a href="#" class="lf-link">Ver apps recomendados →</a>
-    </div>
-    <div class="lf-card">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        <path d="m14.5 9-5 5"/>
-        <path d="m9.5 9 5 5"/>
-      </svg>
-      <h3>GamBan</h3>
-      <p>Software que bloqueia todas as plataformas no dispositivo por tempo determinado.</p>
-      <a href="https://gamban.com" target="_blank" class="lf-link">gamban.com →</a>
+<section class="section" id="ajuda" style="border-top: 1px solid var(--gray2); padding-top: 100px; padding-bottom: 100px;">
+  <div class="section-label" style="color: var(--lime);">// rede de apoio</div>
+  <h2 class="section-h2" style="margin-bottom: 60px;">VOCÊ NÃO PRECISA <br><em>ENFRENTAR ISSO</em> SOZINHO</h2>
+
+  <!-- APOIO EMOCIONAL -->
+  <div class="help-group">
+    <div class="help-group-title">APOIO <span>EMOCIONAL</span></div>
+    <div class="lf-grid">
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Telefone -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>CVV</h3>
+        <p>Atendimento emocional gratuito, anônimo e disponível 24 horas por dia.</p>
+        <a href="https://www.cvv.org.br" target="_blank" class="lf-link">Acessar →</a>
+      </div>
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Coração/Cuidado -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </div>
+        <h3>CAPS</h3>
+        <p>Atendimento psicológico e psiquiátrico gratuito através do SUS.</p>
+        <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2025/setembro/saude-mental-no-sus-saiba-como-buscar-atendimento" target="_blank" class="lf-link">Encontrar CAPS →</a>
+      </div>
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Usuário/Mente -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Psicólogos</h3>
+        <p>Busque ajuda profissional para desenvolver hábitos mais saudáveis.</p>
+        <a href="https://site.cfp.org.br" target="_blank" class="lf-link">Encontrar profissional →</a>
+      </div>
+      
     </div>
   </div>
+
+  <!-- DEPENDÊNCIA -->
+  <div class="help-group">
+    <div class="help-group-title danger">RECUPERAÇÃO E <span>DEPENDÊNCIA</span></div>
+    <div class="lf-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 320px)); max-width: 800px; margin: 0 auto;">
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Grupo/Apoio -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Jogadores Anônimos</h3>
+        <p>Grupo de apoio para pessoas afetadas por apostas e jogo compulsivo.</p>
+        <a href="https://jogadoresanonimos.org.br" target="_blank" class="lf-link">Encontrar reunião →</a>
+      </div>
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Coração Ativo -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg>
+        </div>
+        <h3>Narcóticos Anônimos</h3>
+        <p>Programa de recuperação para pessoas afetadas pela dependência química.</p>
+        <a href="https://www.na.org.br" target="_blank" class="lf-link">Encontrar reunião →</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- PROTEÇÃO -->
+  <div class="help-group">
+    <div class="help-group-title lime">FERRAMENTAS DE <span>PROTEÇÃO</span></div>
+    
+    <!-- Adicionamos o style inline para travar a largura e centralizar os 2 cards -->
+    <div class="lf-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 320px)); max-width: 800px; margin: 0 auto;">
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Bloqueio -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <h3>Autoexclusão</h3>
+        <p>Solicite o bloqueio voluntário de sua conta nas plataformas de apostas.</p>
+        <a href="https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/autoexclusao" target="_blank" class="lf-link">Saiba mais →</a>
+      </div>
+      
+      <div class="lf-card">
+        <div class="lf-card-icon">
+          <!-- Ícone Balança de Justiça -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+        </div>
+        <h3>Disque 100</h3>
+        <p>Canal nacional para denúncias de violações de direitos humanos.</p>
+        <a href="https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos" target="_blank" class="lf-link">Acessar →</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- CTA FINAL PARA A PÁGINA DEDICADA -->
+  <div style="text-align: center; margin-top: 80px;">
+    <a href="ajuda.html" class="btn-main" style="background: var(--white); color: var(--black); padding: 18px 40px; font-size: 18px;">ACESSAR CENTRAL DE AJUDA COMPLETA →</a>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════
