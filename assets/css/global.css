@@ -105,7 +105,7 @@ nav.scrolled {
   font-size: 11px;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: rgba(243, 241, 235, 0.6);
+  color: rgba(243, 241, 235, 0.678);
   text-decoration: none;
   transition: color .2s;
   position: relative;
@@ -299,16 +299,19 @@ footer {
   border: none;
   color: var(--white);
   z-index: 101;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   nav, footer, .section {
     padding-left: 20px;
     padding-right: 20px;
   }
+  
   .mobile-menu-btn {
     display: block;
   }
+  
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -317,39 +320,20 @@ footer {
     right: -100%;
     width: 100vw;
     height: 100vh;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(10, 10, 10, 0.98);
     backdrop-filter: blur(12px);
     padding-top: 100px;
     align-items: center;
-    gap: 40px;
-    transition: right 0.3s ease;
+    gap: 30px;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 100;
   }
+  
   .nav-links.active {
     right: 0;
   }
+  
   .nav-links a {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--black);
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-    border-bottom: 1px solid var(--gray2);
-    /* Esconde o menu por padrão */
-    display: none; 
-    z-index: 100;
-  }
-
-  .nav-links.active {
-    display: flex; 
+    font-size: 18px;
   }
 }

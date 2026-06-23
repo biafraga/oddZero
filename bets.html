@@ -1,10 +1,354 @@
-<a>página referente a aba de bets</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OddZero - As Bets</title>
 
-<!-- <ul class="nav-links" id="nav-links">
-  <li><a href="sobre-as-bets.html" class="active-link">Sobre as bets</a></li>
-  <li><a href="simulador.html">Simulador</a></li>
-  <li><a href="casos-reais.html">Casos Reais</a></li> 
-  <li><a href="forum.html">Conte sua história</a></li>
-  <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
-  <li><a href="betblock.html" class="nav-btn-special">Baixar BetBlock</a></li>
-</ul> -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=block" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/bets.css">
+</head>
+<body>
+
+<!-- ══════════════════════════
+     CURSOR CUSTOMIZADO
+══════════════════════════ -->
+<div class="cur" id="cur"></div>
+
+<!-- ══════════════════════════
+     NAVEGAÇÃO
+══════════════════════════ -->
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  
+  <ul class="nav-links" id="nav-links">
+    <li><a href="bets.html" class="active-link">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════
+     1. BANNER HEADER
+══════════════════════════ -->
+<header class="page-banner" style="background-image: url('assets/imagens/home/fichas.jpg');">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="banner-kicker">// // SOBRE AS BETS</div>
+    <h1 class="banner-title">O MERCADO DAS BANCAS</h1>
+    <p class="banner-desc">Como o lucro bilionário é construído em cima das suas perdas.</p>
+  </div>
+</header>
+
+<!-- ══════════════════════════
+     2. LINHA DO TEMPO HORIZONTAL
+══════════════════════════ -->
+<section class="section" id="timeline">
+  <div class="section-label" style="color: var(--lime);">// dossiê jurídico</div>
+  <h2 class="section-h2" style="margin-bottom: 60px;">COMO ISSO FICOU <span class="hl-red">LEGAL?</span></h2>
+
+  <div class="timeline-horizontal">
+    <div class="timeline-track"></div>
+    
+    <div class="timeline-step">
+      <div class="step-dot"></div>
+      <div class="step-content">
+        <div class="step-year">2018</div>
+        <h3 class="step-title">A Porta se Abre</h3>
+        <p class="step-desc">A Lei 13.756/2018 legaliza as apostas de "quota fixa", mas não cria regras de operação ou tributação. Um cheque em branco no mercado brasileiro.</p>
+      </div>
+    </div>
+
+    <div class="timeline-step">
+      <div class="step-dot"></div>
+      <div class="step-content">
+        <div class="step-year">2019—2022</div>
+        <h3 class="step-title">O Limbo Offshore</h3>
+        <p class="step-desc">Aproveitando a falta de regulamentação, centenas de sites explodem operando em paraísos fiscais, lucrando bilhões sem responder à nossa justiça.</p>
+      </div>
+    </div>
+
+    <div class="timeline-step">
+      <div class="step-dot"></div>
+      <div class="step-content">
+        <div class="step-year">2023—Hoje</div>
+        <h3 class="step-title">A Oficialização</h3>
+        <p class="step-desc">A Lei 14.790/2023 tenta regulamentar para arrecadar impostos, mas acaba legitimando e blindando a margem de lucro garantida das casas (RTP).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     3. AS BETS E O COMPARATIVO
+══════════════════════════ -->
+<section class="section" id="analise-mercado" style="border-top: 1px solid #1a1a1a;">
+  <div class="section-label" style="color: var(--lime);">// raio-x das casas</div>
+  <h2 class="section-h2" style="margin-bottom: 40px;">AS <span class="hl-lime">BETS</span></h2>
+  
+  <!-- Tabela Comparativa -->
+  <div class="table-wrapper">
+    <div class="table-kicker">// comparativo real de odds — mesmo evento</div>
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th style="text-align: left;">Casa</th>
+          <th>Odd A</th>
+          <th>Odd B</th>
+          <th>Margem (banca retém)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="house-name">bet365</td>
+          <td class="odd-val">1,95</td>
+          <td class="odd-val">1,95</td>
+          <td><span class="margin-badge badge-green">~2,6%</span></td>
+        </tr>
+        <tr>
+          <td class="house-name">Betano</td>
+          <td class="odd-val">1,92</td>
+          <td class="odd-val">1,92</td>
+          <td><span class="margin-badge badge-orange">~4,2%</span></td>
+        </tr>
+        <tr>
+          <td class="house-name">Sportingbet</td>
+          <td class="odd-val">1,90</td>
+          <td class="odd-val">1,90</td>
+          <td><span class="margin-badge badge-red">~5,3%</span></td>
+        </tr>
+        <tr>
+          <td class="house-name">Betnacional</td>
+          <td class="odd-val">1,88</td>
+          <td class="odd-val">1,88</td>
+          <td><span class="margin-badge badge-red-dark">~6,4%</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-note">// Odd mais alta = menos dinheiro retido pela casa. Nenhuma te faz ganhar — só te faz perder menos devagar.</p>
+  </div>
+
+  <!-- Cards das Casas -->
+  <div class="house-cards-grid">
+    
+    <!-- bet365 -->
+    <div class="bet-house-card card-green" onclick="openBetModal('bet365')">
+      <div class="bh-header">
+        <div class="bh-header-left">
+          <div class="bh-logo-box"><img src="assets/imagens/bets/bet365.png" alt="bet365"></div>
+          <div class="bh-titles">
+            <div class="bh-cat">apostas esportivas</div>
+            <h3 class="bh-name">bet365</h3>
+          </div>
+        </div>
+        <span class="bh-margin-badge">Margem ~3–6%</span>
+      </div>
+      <p class="bh-desc">Considerada referência global de odds. Movimenta bilhões investindo pesado em tecnologia e modelagem estatística.</p>
+      <div class="bh-stats">
+        <div class="bh-stat-box"><div class="bh-stat-label">lucro 2025</div><div class="bh-stat-val text-red">R$1,8bi</div></div>
+        <div class="bh-stat-box"><div class="bh-stat-label">odd típica</div><div class="bh-stat-val text-green">1,95</div></div>
+      </div>
+
+        <div class="bh-footer">
+          <span class="card-more">saiba mais</span>
+        </div>
+    </div>
+
+    <!-- Betano -->
+    <div class="bet-house-card card-orange" onclick="openBetModal('betano')">
+      <div class="bh-header">
+        <div class="bh-header-left">
+          <div class="bh-logo-box"><img src="assets/imagens/bets/betano.png" alt="Betano"></div>
+          <div class="bh-titles">
+            <div class="bh-cat">Kaizen Gaming</div>
+            <h3 class="bh-name">Betano</h3>
+          </div>
+        </div>
+        <span class="bh-margin-badge">Margem ~4–7%</span>
+      </div>
+      <p class="bh-desc">Cresceu via patrocínios e marketing agressivo. Interface moderna, odds ligeiramente inferiores em mercados menores.</p>
+      <div class="bh-stats">
+        <div class="bh-stat-box"><div class="bh-stat-label">lucro 2025</div><div class="bh-stat-val text-red">US$4,1bi</div></div>
+        <div class="bh-stat-box"><div class="bh-stat-label">odd típica</div><div class="bh-stat-val text-green">1,92</div></div>
+      </div>
+
+      <div class="bh-footer">
+          <span class="card-more">saiba mais</span>
+        </div>
+    </div>
+
+    <!-- Sportingbet -->
+    <div class="bet-house-card card-red" onclick="openBetModal('sportingbet')">
+      <div class="bh-header">
+        <div class="bh-header-left">
+          <div class="bh-logo-box"><img src="assets/imagens/bets/sportingbet.jpg" alt="Sportingbet"></div>
+          <div class="bh-titles">
+            <div class="bh-cat">Grupo Entain</div>
+            <h3 class="bh-name">Sportingbet</h3>
+          </div>
+        </div>
+        <span class="bh-margin-badge">Margem ~5–8%</span>
+      </div>
+      <p class="bh-desc">Marca tradicional focada no público recreativo. Em muitos eventos, as odds ficam abaixo da média dos concorrentes.</p>
+      <div class="bh-stats">
+        <div class="bh-stat-box"><div class="bh-stat-label">lucro 2025</div><div class="bh-stat-val text-red">R$4,5bi</div></div>
+        <div class="bh-stat-box"><div class="bh-stat-label">odd típica</div><div class="bh-stat-val text-green">1,90</div></div>
+      </div>
+
+      <div class="bh-footer">
+          <span class="card-more">saiba mais</span>
+        </div>
+    </div>
+
+    <!-- Betnacional -->
+    <div class="bet-house-card card-red" onclick="openBetModal('betnacional')">
+      <div class="bh-header">
+        <div class="bh-header-left">
+          <div class="bh-logo-box"><img src="assets/imagens/bets/betnacional.png" alt="Betnacional"></div>
+          <div class="bh-titles">
+            <div class="bh-cat">Foco Nacional</div>
+            <h3 class="bh-name">Betnacional</h3>
+          </div>
+        </div>
+        <span class="bh-margin-badge">Margem ~5–9%</span>
+      </div>
+      <p class="bh-desc">Cresceu no Brasil com foco 100% local: estaduais e séries menores. Fortíssimo uso de influenciadores para atração.</p>
+      <div class="bh-stats">
+        <div class="bh-stat-box"><div class="bh-stat-label">lucro 2025</div><div class="bh-stat-val text-red">R$36,9bi</div></div>
+        <div class="bh-stat-box"><div class="bh-stat-label">odd típica</div><div class="bh-stat-val text-green">1,88</div></div>
+      </div>
+
+      <div class="bh-footer">
+          <span class="card-more">saiba mais</span>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Falta alguma bet? (Caixa de sugestões) -->
+  <div class="suggestion-box">
+    <div class="sug-content">
+      <div class="sug-kicker">// contribuição</div>
+      <h3 class="sug-title">FALTA ALGUMA<br><span class="hl-lime">BET?</span></h3>
+      <p class="sug-desc">Sugira uma casa ou modalidade que não está aqui. Nossa equipe analisa as odds e calcula a margem.</p>
+    </div>
+    <div class="sug-form">
+      <div class="form-group">
+        <label>Nome da bet ou casa</label>
+        <input type="text" placeholder="ex: Blaze, Betfair, Pixbet...">
+      </div>
+      <div class="form-group">
+        <label>O que você sabe sobre ela?</label>
+        <textarea placeholder="Como funciona, quais odds pratica..." rows="3"></textarea>
+      </div>
+      <button class="sug-btn" onclick="this.classList.add('sent'); this.textContent='✓ Enviado!';">Enviar sugestão →</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════
+     4. AUTÓPSIA DO CAÇA-NÍQUEL
+═══════════════════════════════ -->
+<section class="section" id="autopsia" style="border-top: 1px solid #1a1a1a; padding-bottom: 120px;">
+  <div class="section-label" style="color: var(--lime);">// engenharia do vício</div>
+  <h2 class="section-h2" style="margin-bottom: 60px;">A AUTÓPSIA DE UM <span class="hl-lime">CAÇA-NÍQUEL</span></h2>
+
+  <div class="autopsy-layout">
+    <div class="autopsy-panel illusion-panel">
+      <div class="panel-tag">O QUE VOCÊ VÊ (Design)</div>
+      <div class="slot-machine-fake">
+        <div class="slot-lights pulse-lights"></div>
+        <div class="slot-screen">
+          <div class="slot-reel">🍒</div>
+          <div class="slot-reel">🍒</div>
+          <div class="slot-reel drop-animation">🔔</div>
+        </div>
+        <div class="slot-msg highlight-orange">QUAAASE! TENTE DE NOVO!</div>
+      </div>
+      <p class="panel-desc">
+        <strong>A Ilusão do Near-Miss:</strong> O design é feito para liberar picos de dopamina. Mostrar o "quase" força a sua próxima aposta.
+      </p>
+    </div>
+
+    <div class="autopsy-panel reality-panel">
+      <div class="panel-tag tag-red">O QUE REALMENTE ACONTECE (Código)</div>
+      <div class="code-terminal">
+        <div class="term-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="term-title">rng_core.js</span>
+        </div>
+        <div class="term-body">
+          <div class="code-line"><span class="c-keyword">if</span> (house.currentRTP > <span class="c-num">95.0</span>) {</div>
+          <div class="code-line indent hl-code"><span class="c-keyword">return</span> triggerNearMissAnimation();</div>
+          <div class="code-line">}</div>
+          <div class="code-line"><span class="c-keyword">let</span> result = Math.<span class="c-func">random</span>();</div>
+          <div class="code-line"><span class="c-keyword">return</span> calculateLoss();</div>
+        </div>
+      </div>
+      <p class="panel-desc">
+        <strong>A Matemática Fria:</strong> O servidor decide que você vai perder antes da roleta girar. Se o RTP estourar, a vitória é bloqueada.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     FOOTER
+═══════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Casos Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS Turma 2024.1 · Projeto 2026 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════
+     MODAL INVESTIGATIVO
+═══════════════════════════════ -->
+<div id="bet-modal-overlay" class="bet-modal-overlay" onclick="closeBetModal(event)">
+  <div class="bet-modal-box" id="bet-modal-box">
+    <!-- O conteúdo será injetado pelo JS aqui -->
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script src="assets/js/global.js"></script>
+<script src="assets/js/bets.js"></script>
+</body>
+</html>
