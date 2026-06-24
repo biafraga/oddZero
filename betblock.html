@@ -1,10 +1,161 @@
-<a>página referente ao bet block</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OddZero - As Bets</title>
 
-<!-- <ul class="nav-links" id="nav-links">
-  <li><a href="bets.html">Sobre as bets</a></li>
-  <li><a href="simulador.html">Simulador</a></li>
-  <li><a href="casos-reais.html">Casos Reais</a></li> 
-  <li><a href="forum.html">Conte sua história</a></li>
-  <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
-  <li><a href="betblock.html" class="active-link" class="nav-btn-special">Baixar BetBlock</a></li>
-</ul> -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=block" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/betblock.css">
+</head>
+<body>
+
+<!-- ══════════════════════════
+     CURSOR CUSTOMIZADO
+══════════════════════════ -->
+<div class="cur" id="cur"></div>
+
+<!-- ══════════════════════════
+     NAVEGAÇÃO
+══════════════════════════ -->
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  
+  <ul class="nav-links" id="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html" class="active-link">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+  <header class="block-hero">
+    <div class="hero-content">
+      <div class="kicker-tag">// PROTEÇÃO NEURAL AVANÇADA</div>
+      <h1 class="hero-title">BLOQUEIE SITES E <br><span class="hl-lime">PROPAGANDAS</span></h1>
+      <p class="hero-desc">Proteja-se ou seus entes queridos com nossa extensão que bloqueia automaticamente sites de apostas, anúncios e gatilhos de jogos de azar de forma implacável.</p>
+      
+      <div class="hero-actions">
+        <a href="assets/downloads/betblock-extensao.zip" download class="btn-download">BAIXAR EXTENSÃO ↓</a>
+        <a href="#instalar" class="btn-outline">Como instalar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATUS/ESTATÍSTICAS -->
+  <section class="stats-section">
+    <div class="stat-box">
+      <span class="s-val text-lime">50K+</span>
+      <span class="s-label">Sites Bloqueados</span>
+    </div>
+    <div class="stat-box">
+      <span class="s-val text-red">100K+</span>
+      <span class="s-label">Usuários Ativos</span>
+    </div>
+    <div class="stat-box">
+      <span class="s-val text-white">24/7</span>
+      <span class="s-label">Proteção Ativa</span>
+    </div>
+  </section>
+
+  <!-- O QUE BLOQUEAMOS (Usando a estrutura do Versus) -->
+  <section class="section" style="border-top: 1px solid #1a1a1a;">
+    <div class="section-label" style="color: var(--lime);">// filtro absoluto</div>
+    <h2 class="section-h2" style="margin-bottom: 60px;">O QUE NÓS <span class="hl-red">BLOQUEAMOS</span></h2>
+
+    <div class="block-features-grid">
+      <div class="feature-panel panel-red">
+        <h3 class="f-title">SITES DE APOSTAS E CASSINOS</h3>
+        <ul class="f-list">
+          <li>Bloqueio instantâneo de domínios .bet e derivados.</li>
+          <li>Filtro rigoroso contra cassinos online, roletas e slots.</li>
+          <li>Interrupção de scripts de rastreamento de casas de aposta.</li>
+        </ul>
+      </div>
+
+      <div class="feature-panel panel-lime">
+        <h3 class="f-title">PROPAGANDAS E GATILHOS</h3>
+        <ul class="f-list">
+          <li>Remoção de banners predatórios em sites de notícias e esportes.</li>
+          <li>Inibição de pop-ups oferecendo "Bônus de Cadastro".</li>
+          <li>Filtragem de anúncios patrocinados em redes sociais.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASSO A PASSO DA INSTALAÇÃO -->
+  <section class="section" id="instalar" style="border-top: 1px solid #1a1a1a; padding-bottom: 120px;">
+    <div class="section-label" style="color: var(--lime);">// manual de operação</div>
+    <h2 class="section-h2" style="margin-bottom: 60px;">COMO <span class="hl-lime">INSTALAR</span> (CHROME)</h2>
+
+    <div class="steps-container">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <p>Faça o <strong>Download</strong> do arquivo da extensão (.zip) e extraia em uma pasta.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <p>No Chrome, clique nos <strong>3 pontinhos</strong> (menu) > Extensões > <strong>Gerir extensões</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <p>No canto superior direito, ative o <strong>Modo do desenvolvedor</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <p>Clique em <strong>Carregar sem compactação</strong> e selecione a pasta extraída no passo 01.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ═══════════════════════════════
+     FOOTER
+═══════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Casos Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS Turma 2024.1 · Projeto 2026 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="assets/js/global.js"></script>
+<script src="assets/js/bets.js"></script>
+</body>
+</html>
