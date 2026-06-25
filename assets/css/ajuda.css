@@ -1,0 +1,142 @@
+/* ═══════════════════════════════
+   ESTILOS DA PÁGINA DE AJUDA
+═══════════════════════════════ */
+
+/* Reutilizando o banner que a gente já tem globalmente */
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.banner-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,1) 100%); }
+.banner-content { position: relative; z-index: 2; margin-top: 60px; }
+.banner-kicker { font-family: var(--font-m); font-size: 12px; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+.banner-title { font-family: var(--font-h); font-size: clamp(50px, 8vw, 100px); font-weight: 900; text-transform: uppercase; line-height: 0.9; color: var(--white); margin-bottom: 20px; }
+.banner-desc { font-size: 16px; color: rgba(240, 237, 230, 0.7); max-width: 600px; margin: 0 auto; }
+
+/* O Container Central da Página */
+.help-container {
+  max-width: 1200px;
+  margin: -40px auto 100px; /* Margem negativa pra subir um pouco por cima do banner escuro */
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ═══════════════════════════════
+   O DESTAQUE DO QUIZ
+═══════════════════════════════ */
+.quiz-highlight {
+  background: linear-gradient(135deg, rgba(232, 50, 10, 0.1) 0%, #0A0A0A 100%);
+  border: 1px solid var(--red);
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.quiz-kicker { font-family: var(--font-m); font-size: 12px; letter-spacing: 0.1em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+.quiz-title { font-family: var(--font-h); font-size: 48px; font-weight: 900; color: var(--white); text-transform: uppercase; line-height: 1; margin-bottom: 20px; }
+.hl-red { color: var(--red); }
+.quiz-desc { font-size: 16px; color: rgba(240, 237, 230, 0.8); max-width: 600px; line-height: 1.6; margin-bottom: 32px; }
+
+.btn-quiz {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  padding: 16px 32px;
+  font-family: var(--font-b);
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-quiz:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(232, 50, 10, 0.4); }
+
+.quiz-icon { opacity: 0.2; } /* Ícone grande de fundo */
+
+/* ═══════════════════════════════
+   AÇÕES REPETIDAS (CTAs)
+═══════════════════════════════ */
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.action-card {
+  background: rgba(200, 241, 53, 0.05);
+  border: 1px solid var(--lime);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.action-card.dark {
+  background: #111;
+  border: 1px solid #2a2a2a;
+}
+
+.action-card h3 { font-family: var(--font-h); font-size: 32px; font-weight: 900; color: var(--white); margin-bottom: 16px; }
+.action-card p { font-size: 15px; color: rgba(240, 237, 230, 0.7); line-height: 1.6; margin-bottom: 32px; }
+
+.btn-action { display: inline-block; padding: 14px 24px; font-family: var(--font-b); font-weight: 700; text-transform: uppercase; text-decoration: none; border-radius: 8px; text-align: center; transition: all 0.2s; }
+.btn-lime { background: var(--lime); color: var(--black); }
+.btn-lime:hover { transform: scale(1.02); }
+.btn-outline { border: 1px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--black); }
+
+/* ═══════════════════════════════
+   REDE DE APOIO (OS CARDS QUE NÃO ESPARRAMAM)
+═══════════════════════════════ */
+.support-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start; /* Alinha a partir da esquerda */
+}
+
+.support-card {
+  background: #0A0A0A;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  /* A mágica do tamanho igual: */
+  width: calc(33.333% - 16px);
+  min-width: 300px;
+  flex-grow: 0;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.support-card:hover { border-color: var(--lime); transform: translateY(-5px); }
+.support-card h4 { font-family: var(--font-h); font-size: 24px; font-weight: 900; color: var(--white); margin-bottom: 12px; }
+.support-card p { font-size: 14px; color: rgba(240, 237, 230, 0.6); line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
+.support-card a { font-family: var(--font-m); font-size: 11px; color: var(--lime); text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; }
+
+/* ═══════════════════════════════
+   RESPONSIVO (MOBILE)
+═══════════════════════════════ */
+@media (max-width: 900px) {
+  .quiz-highlight { flex-direction: column; padding: 40px 24px; }
+  .quiz-icon { display: none; }
+  .action-grid { grid-template-columns: 1fr; }
+  .support-card { width: 100%; }
+}

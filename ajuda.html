@@ -1,11 +1,166 @@
-<a>página referente a aba de ajuda</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OddZero - As Bets</title>
 
-<!-- Verificar o active link
-<ul class="nav-links" id="nav-links">
-  <li><a href="bets.html">Sobre as bets</a></li>
-  <li><a href="simulador.html">Simulador</a></li>
-  <li><a href="casos-reais.html" class="active-link">Casos Reais</a></li> 
-  <li><a href="forum.html">Conte sua história</a></li>
-  <li><a href="ajuda.html" class="active-link" class="nav-btn-outline">Ajuda</a></li>
-  <li><a href="betblock.html" class="nav-btn-special">Baixar BetBlock</a></li>
-</ul> -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=block" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/ajuda.css">
+</head>
+<body>
+
+<!-- ══════════════════════════
+     CURSOR CUSTOMIZADO
+══════════════════════════ -->
+<div class="cur" id="cur"></div>
+
+<!-- ══════════════════════════
+     NAVEGAÇÃO
+══════════════════════════ -->
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  
+  <ul class="nav-links" id="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<header class="page-banner">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="banner-kicker">// REDE DE APOIO</div>
+    <h1 class="banner-title">NÃO LUTE<br>SOZINHO</h1>
+    <p class="banner-desc">O vício não é uma falha moral, é um sistema desenhado por engenheiros comportamentais para te quebrar. Existe saída.</p>
+  </div>
+</header>
+
+<main class="help-container">
+  
+  <section class="quiz-highlight">
+    <div class="quiz-content">
+      <div class="quiz-kicker">// AUTOAVALIAÇÃO</div>
+      <h2 class="quiz-title">ACHA QUE TEM O CONTROLE?<br><span class="hl-red">O ALGORITMO APOSTA QUE NÃO.</span></h2>
+      <p class="quiz-desc">O vício em bets é silencioso. Ele não começa com dívidas astronômicas, começa com "só 10 reais" e a falsa ilusão de que você pode recuperar o que perdeu. Faça nosso teste anônimo de 25 perguntas e descubra seu nível real de risco antes que seja tarde.</p>
+      
+      <a href="quiz.html" class="btn-quiz">FAZER O TESTE AGORA →</a>
+    </div>
+    <div class="quiz-icon">
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+  </section>
+
+  <section class="action-grid">
+    <div class="action-card">
+      <h3>A MATEMÁTICA DA DERROTA</h3>
+      <p>Ainda acha que pode ganhar da casa a longo prazo? Veja com seus próprios olhos como o algoritmo garante o seu prejuízo.</p>
+      <a href="simulador.html" class="btn-action btn-lime">Simular minha perda →</a>
+    </div>
+    <div class="action-card dark">
+      <h3>QUEBRE O SILÊNCIO</h3>
+      <p>O isolamento alimenta o vício. Leia relatos de quem está na mesma situação e compartilhe a sua dor em um espaço 100% seguro e sem julgamentos.</p>
+      <a href="forum.html" class="btn-action btn-outline">Acessar Fórum Anônimo →</a>
+    </div>
+  </section>
+
+  <section class="support-network">
+    <div class="section-label" style="color: var(--lime);">// rede de apoio profissional</div>
+    <h2 class="support-title" style="margin-bottom: 40px; font-family: var(--font-h); font-size: 40px; text-transform: uppercase;">ONDE BUSCAR <span class="hl-lime">AJUDA</span></h2>
+    
+    <div class="support-grid">
+      <div class="support-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" style="margin-bottom: 20px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <h4>CVV - 188</h4>
+        <p>Atendimento emocional gratuito, sob sigilo total. Disponível 24 horas por dia por telefone, chat ou e-mail.</p>
+        <a href="https://cvv.org.br/" target="_blank">Acessar portal →</a>
+      </div>
+      <div class="support-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" style="margin-bottom: 20px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <h4>CAPS AD</h4>
+        <p>Centros de Atenção Psicossocial Álcool e Drogas (SUS). Tratamento psiquiátrico e psicológico gratuito para dependências.</p>
+        <a href="https://www.gov.br/saude/pt-br" target="_blank">Encontrar unidade →</a>
+      </div>
+      <div class="support-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" style="margin-bottom: 20px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h4>Jogadores Anônimos</h4>
+        <p>Irmandade de homens e mulheres que compartilham suas experiências e esperanças para resolver seu problema comum com o jogo.</p>
+        <a href="https://jogadoresanonimos.com.br/" target="_blank">Procurar grupo →</a>
+      </div>
+
+      <div class="support-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h4>Psicólogos</h4>
+        <p>Busque ajuda profissional para desenvolver hábitos mais saudáveis.</p>
+        <a href="https://site.cfp.org.br" target="_blank" class="lf-link">Encontrar profissional →</a>
+      </div>
+
+      <div class="support-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg>
+        <h4>Narcóticos Anônimos</h4>
+        <p>Programa de recuperação para pessoas afetadas pela dependência química.</p>
+        <a href="https://www.na.org.br" target="_blank" class="lf-link">Encontrar reunião →</a>
+      </div>
+
+      <div class="support-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        <h4>Autoexclusão</h4>
+        <p>Solicite o bloqueio voluntário de sua conta nas plataformas de apostas.</p>
+        <a href="https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/autoexclusao" target="_blank" class="lf-link">Saiba mais →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════
+     FOOTER
+═══════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>Odd<em>Zero</em></h2>
+      <p>A odd real das apostas é zero. Este site existe para que você entenda isso antes de perder o que importa.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Conteúdo</h4>
+      <ul>
+        <li><a href="bets.html">Sobre as Bets</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="casos-reais.html">Casos Reais</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Comunidade</h4>
+      <ul>
+        <li><a href="forum.html">Fórum Anônimo</a></li>
+        <li><a href="ajuda.html">Central de Ajuda</a></li>
+        <li><a href="betblock.html">BetBlock</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>// SENAC RIO · ADS Turma 2024.1 · Projeto 2026 · Extensão: Educação Digital</p>
+    <p>Feito com propósito, não com lucro.</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="assets/js/global.js"></script>
+</body>
+</html>

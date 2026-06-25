@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OddZero - Autoavaliação</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/quiz.css">
+</head>
+<body>
+  
+<div class="cur" id="cur"></div>
+
+<nav>
+  <a href="index.html" class="logo">Odd<em>Zero</em></a>
+  <button class="mobile-menu-btn" id="mobile-menu-btn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="bets.html">Sobre as Bets</a></li>
+    <li><a href="simulador.html">Simulador</a></li>
+    <li><a href="casos-reais.html">Casos Reais</a></li>
+    <li><a href="forum.html">Conte sua história</a></li>
+    <li><a href="betblock.html">Betblock</a></li>
+    <li><a href="ajuda.html" class="nav-btn-outline">Ajuda</a></li>
+  </ul>
+</nav>
+
+<section class="quiz-hero">
+  <div class="section-label" style="color: var(--lime);">// autoavaliação</div>
+  <h1>
+    VOCÊ AINDA ESTÁ<br>
+    NO <span>CONTROLE?</span>
+  </h1>
+  <p>
+    Responda 8 perguntas rápidas sobre sua relação com apostas online.
+    O resultado não é um diagnóstico, mas pode indicar sinais de alerta.
+  </p>
+</section>
+
+<main class="quiz-page">
+  <section class="quiz-card">
+    <div class="quiz-top">
+      <span id="quiz-counter">PERGUNTA 1/8</span>
+      <div class="quiz-progress">
+        <div id="quiz-progress-bar"></div>
+      </div>
+    </div>
+
+    <h2 id="quiz-question">Carregando...</h2>
+
+    <div id="quiz-options" class="quiz-options"></div>
+
+    <div class="quiz-actions">
+      <button id="quiz-prev" class="quiz-btn ghost" type="button">Voltar</button>
+      <button id="quiz-next" class="quiz-btn" type="button">Próxima →</button>
+    </div>
+
+    <div id="resultado" class="quiz-result hidden"></div>
+  </section>
+</main>
+
+<script src="assets/js/global.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>

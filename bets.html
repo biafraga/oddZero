@@ -47,9 +47,8 @@
 <header class="page-banner" style="background-image: url('assets/imagens/home/fichas.jpg');">
   <div class="banner-overlay"></div>
   <div class="banner-content">
-    <div class="banner-kicker">// // SOBRE AS BETS</div>
     <h1 class="banner-title">O MERCADO DAS BANCAS</h1>
-    <p class="banner-desc">NOMES DIFERENTES. O MESMO CÓDIGO. A MESMA MATEMÁTICA QUE GARANTE SUA DERROTA.</p>
+    <p class="banner-desc">Nomes diferentes. O mesmo código. A mesma matemática que garante sua derrota.</p>
   </div>
 </header>
 
@@ -61,6 +60,7 @@
   <h2 class="section-h2" style="margin-bottom: 60px;">COMO ISSO FICOU <span class="hl-red">LEGAL?</span></h2>
 
   <div class="timeline-horizontal">
+    
     <div class="timeline-track"></div>
     
     <div class="timeline-step">
@@ -89,6 +89,93 @@
         <p class="step-desc">A Lei 14.790/2023 tenta regulamentar para arrecadar impostos, mas acaba legitimando e blindando a margem de lucro garantida das casas (RTP).</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     A ANATOMIA DO GOLPE (MODALIDADES)
+═══════════════════════════════ -->
+<section class="section" id="modalidades" style="border-top: 1px solid #1a1a1a; padding-bottom: 120px;">
+  <div class="section-label" style="color: var(--lime);">// o motor do vício</div>
+  <h2 class="section-h2" style="margin-bottom: 60px;">
+    COMO ELES <span class="hl-red">PROGRAMAM</span> SUA MENTE
+  </h2>
+
+  <div class="mind-engine">
+
+    <div class="engine-visual">
+      <div class="engine-header">
+        <span class="engine-dot"></span>
+        <span id="engine-file">crash_games.loop</span>
+      </div>
+
+      <div class="engine-screen">
+        <div class="engine-status">
+          <span id="engine-mode">MODO: URGÊNCIA</span>
+          <strong id="engine-risk">RISCO ALTO</strong>
+        </div>
+
+        <div class="engine-main">
+          <div class="brain-core">
+            <span id="engine-title">CRASH<br>GAMES</span>
+          </div>
+
+          <div class="loop-tag tag-1" id="tag-1">gatilho rápido</div>
+          <div class="loop-tag tag-2" id="tag-2">decisão impulsiva</div>
+          <div class="loop-tag tag-3" id="tag-3">quase vitória</div>
+          <div class="loop-tag tag-4" id="tag-4">nova aposta</div>
+        </div>
+
+        <div class="engine-copy">
+          <h3 id="engine-headline">O jogo te força a decidir antes de pensar.</h3>
+          <p id="engine-text">
+            Partidas rápidas criam tensão em poucos segundos. Quanto menor o tempo de decisão, maior a chance de agir no impulso.
+          </p>
+        </div>
+
+        <div class="engine-terminal">
+          <div class="terminal-line" id="line-1"></div>
+          <div class="terminal-line" id="line-2"></div>
+          <div class="terminal-line" id="line-3"></div>
+          <div class="terminal-line red-code" id="line-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="engine-list">
+      <button class="engine-item active" data-engine="crash">
+        <span>01</span>
+        <div>
+          <h3>Crash Games</h3>
+          <p>Aviator, foguete, queda, corrida contra o tempo.</p>
+        </div>
+      </button>
+
+      <button class="engine-item" data-engine="rtp">
+        <span>02</span>
+        <div>
+          <h3>RTP</h3>
+          <p>A porcentagem bonita que esconde a margem da banca.</p>
+        </div>
+      </button>
+
+      <button class="engine-item" data-engine="odds">
+        <span>03</span>
+        <div>
+          <h3>Odds Esportivas</h3>
+          <p>A falsa sensação de controle porque você entende do jogo.</p>
+        </div>
+      </button>
+
+      <button class="engine-item" data-engine="bonus">
+        <span>04</span>
+        <div>
+          <h3>Bônus e Rollover</h3>
+          <p>O prêmio que prende o usuário antes de qualquer saque.</p>
+        </div>
+      </button>
+    </div>
+
   </div>
 </section>
 
@@ -214,7 +301,7 @@
   <div class="suggestion-grid">
     <div class="s-info">
       <div class="section-label">// contribuição</div>
-      <h3 class="s-title">FALTA ALGUMA<br><span class="hl-lime">BET?</span></h3>
+      <h3 class="s-title">FALTA ALGUMA<br><span style="color: var(--lime);">BET</span>?</h3>
       <p class="s-desc">
         Sugira uma casa ou modalidade que não está aqui. Nossa equipe analisa as odds, calcula a margem e publica com dados reais.
       </p>
@@ -231,6 +318,8 @@
       <button type="submit" class="s-btn">Enviar sugestão →</button>
     </form>
   </div>
+</div>
+
 </section>
 
 <!-- ═══════════════════════════════
@@ -240,24 +329,25 @@
   <div class="section-label" style="color: var(--lime);">// marketing de influência</div>
   <h2 class="section-h2" style="margin-bottom: 60px;">QUEM <span class="hl-red">VENDE</span> VS QUEM <span class="hl-lime">ALERTA</span></h2>
 
-  <div class="influencer-layout">
+<div class="influencer-layout">
     
     <div class="inf-panel inf-red">
       <h3 class="inf-panel-title">OS PROMOTORES</h3>
       <p class="inf-panel-desc">Celebridades que emprestam sua credibilidade para normalizar o vício e atrair milhões de seguidores para o abatedouro financeiro.</p>
 
-      <div class="inf-card">
+      <div class="inf-card" onclick="openInfModal('neymar')" style="cursor: pointer;">
         <div class="inf-header">
           <div class="inf-avatar" style="background-image: url('assets/imagens/bets/neymar.jpg');"></div>
           <div class="inf-info">
             <h4>Neymar Jr.</h4>
-            <span>Embaixador Global</span>
+            <span>Atleta profissional</span>
           </div>
         </div>
-        <p>Assinou contratos milionários para ser o rosto de grandes casas de apostas, usando sua influência massiva no futebol para promover a ilusão de ganho fácil como diversão inofensiva.</p>
+        <p>Assinou contratos milionários para ser o rosto de grandes casas de apostas, usando sua influência massiva no futebol...</p>
+        <div class="inf-action">Ver dossiê completo →</div>
       </div>
 
-      <div class="inf-card">
+      <div class="inf-card" onclick="openInfModal('virginia')" style="cursor: pointer;">
         <div class="inf-header">
           <div class="inf-avatar" style="background-image: url('assets/imagens/bets/virginia.jpg');"></div>
           <div class="inf-info">
@@ -265,7 +355,8 @@
             <span>Megainfluenciadora</span>
           </div>
         </div>
-        <p>Fez publicidade ostensiva de cassinos online para seu público jovem, ostentando ganhos irreais que geralmente são obtidos operando em "contas demo" com dinheiro infinito e viciado.</p>
+        <p>Fez publicidade ostensiva de cassinos online para seu público jovem, ostentando ganhos irreais que geralmente são obtidos operando em "contas demo"...</p>
+        <div class="inf-action">Ver dossiê completo →</div>
       </div>
     </div>
 
@@ -273,7 +364,7 @@
       <h3 class="inf-panel-title">A RESISTÊNCIA</h3>
       <p class="inf-panel-desc">Figuras públicas que se recusam a participar do mercado e usam sua voz e poder de alcance para alertar sobre a destruição financeira e mental.</p>
 
-      <div class="inf-card">
+      <div class="inf-card" onclick="openInfModal('mbappe')" style="cursor: pointer;">
         <div class="inf-header">
           <div class="inf-avatar" style="background-image: url('assets/imagens/bets/mbappe.jpg');"></div>
           <div class="inf-info">
@@ -281,10 +372,11 @@
             <span>Atleta Profissional</span>
           </div>
         </div>
-        <p>"As bets já destruíram muita gente." Recusou-se ativamente a participar de campanhas de casas de apostas e fast food da seleção francesa, criticando o perigo do vício entre os torcedores mais pobres.</p>
+        <p>"As bets já destruíram muita gente." Recusou-se ativamente a participar de campanhas de casas de apostas da seleção...</p>
+        <div class="inf-action">Ver dossiê completo →</div>
       </div>
 
-      <div class="inf-card">
+      <div class="inf-card" onclick="openInfModal('anitta')" style="cursor: pointer;">
         <div class="inf-header">
           <div class="inf-avatar" style="background-image: url('assets/imagens/bets/anitta.jpg');"></div>
           <div class="inf-info">
@@ -292,10 +384,17 @@
             <span>Cantora e Empresária</span>
           </div>
         </div>
-        <p>Posicionou-se contra as dinâmicas predatórias, apoiando ativamente campanhas de conscientização e movimentos de bloqueio contra jogos de azar (como o Tigrinho) que inundaram as redes sociais no Brasil.</p>
+        <p>Posicionou-se contra as dinâmicas predatórias, apoiando ativamente campanhas de conscientização e movimentos de bloqueio...</p>
+        <div class="inf-action">Ver dossiê completo →</div>
       </div>
     </div>
 
+  </div>
+
+    <!-- MODAL INFLUENCIADORES -->
+  <div id="inf-modal-overlay" class="bet-modal-overlay" onclick="closeInfModal(event)">
+    <div class="bet-modal-box" id="inf-modal-box">
+      <!-- O conteúdo será injetado pelo JS aqui -->
   </div>
 </section>
 
@@ -322,7 +421,6 @@
     ODDZERO · SEM FILTRO. SEM INFLUENCER. A REALIDADE DAS APOSTAS ONLINE EM NÚMEROS.
   </p>
 </section>
-
 
 
 <!-- ═══════════════════════════════
@@ -362,7 +460,6 @@
 ═══════════════════════════════ -->
 <div id="bet-modal-overlay" class="bet-modal-overlay" onclick="closeBetModal(event)">
   <div class="bet-modal-box" id="bet-modal-box">
-    <!-- O conteúdo será injetado pelo JS aqui -->
   </div>
 </div>
 
