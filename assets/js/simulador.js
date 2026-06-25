@@ -299,16 +299,3 @@ function compartilharWhatsapp() {
     const texto = encodeURIComponent("Fiz a simulação no OddZero. O resultado foi brutal: a longo prazo, o algoritmo ganha e minha conta zera. A odd real é zero. Veja o impacto das apostas em: oddzero.com.br");
     window.open("https://wa.me/?text=" + texto, "_blank");
 }
-
-// Aciona a simulação instantaneamente conforme o usuário digita
-document.querySelectorAll('#salario, #valorAposta, #tipoAposta, #apostasDia, #periodo').forEach(campo => {
-  campo.addEventListener('input', () => {
-    const salario = document.getElementById("salario").value;
-    const valorAposta = document.getElementById("valorAposta").value;
-    
-    // Só roda a animação se a base já estiver preenchida
-    if(salario > 0 && valorAposta > 0) {
-      simular(); 
-    }
-  });
-});
